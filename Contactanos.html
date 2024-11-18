@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="CSScontactanos.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="Footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <script src="funcionHeader.js"></script>
+  <script src="funcionFooter.js"></script>
+<title>Urban Feet</title>
+</head>
+<body style="background: #f2f2f2">
+    
+<script>
+  loadHeader();
+</script>
+    
+    <div> 
+  <div class="contact-info">
+      
+      <div class="info-item">
+        <h3>Teléfono</h3>
+        <a href="https://web.whatsapp.com/"><img class="multi_fono" src="imagenes y videos/Phone-icon.png" alt=""/></a>
+        <p>+51 994 926 887</p>
+      </div>
+      <div class="info-item">            
+        <h3>Dirección</h3>
+        <iframe class="multi_tam"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.6883253707914!2d-77.08384411319855!3d-12.077431195214833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9727a3d2d9f%3A0x431327967a9f83f7!2sNike!5e0!3m2!1ses!2spe!4v1728946854851!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Av. Argentina 123, Lima, Perú</p>
+      </div>
+      <div class="info-item">            
+        <h3>Correo</h3>
+        <a href="https://www.google.com/intl/es-419/gmail/about/"><img class="multi_gmail" src="imagenes y videos/logo-Gmail-1.png" alt=""/></a>
+        <p>urbanfeet@gmail.com</p>
+      </div>
+  </div>
+        <div class="subtitu">
+            <div class="open-sans-text">
+                <p style="font-weight: bold;">¡Estamos Aquí Para Ayudarte!</p>
+            <p>¿Tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto con nosotros?</p>
+            <p>¡Nos encantaría saber de ti! En Urban Feet👟, valoramos cada mensaje</p>
+            <p>y nos comprometemos a responderte lo antes posible.</p>
+            </div>
+            <img  class="imghelp"src="imagenes y videos/help.png" alt=""/>
+            <img class="imghelp" src="imagenes y videos/help2.png" alt=""/>
+        </div>
+        <div class="contenedor" style="padding-bottom: 20px;">
+    <div class="botones">
+      <button onclick="mostrarContenido('contenido1')">Mensajes</button>
+      <button onclick="mostrarContenido('contenido2')">Sugerencias</button>
+      <button onclick="mostrarContenido('contenido3')">Libro de reclamaciones</button>
+    </div>
+    <div id="contenido1" class="contenido">
+      <form action="#" class="contact-form">
+          <h3>Envíanos un Mensaje</h3>
+          <input type="text" name="nombre" placeholder="Nombre" required>
+          <input type="text" name="apellidos" placeholder="Apellidos" required>
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+          <textarea style="padding-bottom: 100px;" name="mensaje" placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div id="contenido2" class="contenido">
+      <form action="#" class="contact-form">
+          <h3>Sugerencias</h3>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+          <input type="text" name="apellidos" placeholder="Apellidos" required>
+          <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+          <textarea style="padding-bottom: 100px;" id="sugerencia" name="sugerencia" placeholder="Escribe tu sugerencia" required></textarea>  
+          <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div id="contenido3" class="contenido">
+      <form action="#" class="contact-form">
+          <h3>Libro de Reclamaciones</h3>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+          <input type="text" name="apellidos" placeholder="Apellidos" required>
+          <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+          <input type="date" id="fechaInput">
+          <input type="text" id="dni" name="dni" placeholder="DNI/CE" required>
+          <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
+          <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+          <textarea style="padding-bottom: 100px;" name="mensaje" placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+    </div>
+
+  <script>
+  function mostrarContenido(opcion) {
+    document.querySelectorAll('.contenido').forEach(div => {
+      div.classList.remove('activo');
+    });
+    document.getElementById(opcion).classList.add('activo');
+  }
+
+  window.onload = function() {
+    const fechaInput = document.getElementById('fechaInput');
+    const hoy = new Date().toISOString().split('T')[0];
+    fechaInput.value = hoy;
+
+    // Abrir la sección de "Mensajes" automáticamente
+    mostrarContenido('contenido1');
+  };
+</script>
+
+</body>
+
+<script>
+  loadFooter();
+</script>
+</html>

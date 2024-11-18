@@ -1,0 +1,226 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+h1 {
+    user-select: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+.content {
+    min-height: 80px;
+    background-color: black;
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgLogo {
+    width: 90px;
+    height: 90px;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: antiquewhite;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu .navbar ul li span {
+    font-size: 18px;
+    padding: 20px;
+    color: antiquewhite;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu .navbar ul li a:hover {
+    color: rgb(230, 11, 11);
+    cursor: pointer;
+}
+
+.menu-icono {
+    display: none; /* Oculta el menú hamburguesa por defecto */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icono span {
+    height: 3px;
+    width: 25px;
+    background-color: antiquewhite;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.navbar {
+    display: flex; /* Muestra el menú normal en pantallas grandes */
+    padding: 10px 20px;
+    justify-content: space-between; /* Espacia los elementos */
+    align-items: center;
+}
+
+.login-button {
+    background-color: #333; /* Color de fondo oscuro */
+    color: white; /* Texto en color blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: 2px solid #444; /* Borde ligeramente más claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto 3D */
+    transition: background-color 0.3s ease; /* Transición suave cuando cambia el color de fondo */
+}
+
+.login-button:hover {
+    background-color: #555; /* Color de fondo más claro al pasar el cursor */
+    border-color: #666; /* Borde más claro al pasar el cursor */
+}
+.navbar.active {
+    display: flex; /* Muestra el menú cuando se activa */
+    position: fixed; /* Fijo para que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Asegura que cubra toda la altura de la pantalla */
+    background-color: black; /* Fondo oscuro sin opacidad */
+    flex-direction: column; /* Muestra los elementos en vertical */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.navbar.active ul {
+    flex-direction: column; /* Asegura que los elementos de la lista sean verticales */
+    list-style: none; /* Elimina el estilo de lista por defecto */
+    padding: 0; /* Elimina padding */
+    margin: 0; /* Elimina margin */
+}
+
+.navbar.active ul li {
+    margin: 10px 0; /* Espacio entre los elementos del menú */
+}
+
+@media (max-width: 991px) {
+    .menu-icono {
+        display: flex; /* Muestra el menú hamburguesa en pantallas pequeñas */
+    }
+
+    .menu .navbar {
+        display: none; /* Oculta el menú normal en pantallas pequeñas */
+    }
+
+    .navbar.active {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    .content {
+        min-height: 70px;
+    }
+}
+
+main {
+    min-height: 100vh;
+    position: relative;
+}
+
+.video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.caja-h1 {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.productos {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.caja-productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}

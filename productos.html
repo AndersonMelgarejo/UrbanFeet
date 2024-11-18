@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Feet</title>
+  <link rel="stylesheet" href="disenio.css">
+  <link rel="stylesheet" href="productos.css">
+  <link rel="stylesheet" href="Footer.css">
+  <script src="funcionHeader.js"></script>
+  <script src="funcionFooter.js"></script>
+  <script src="pagination.js"></script>
+
+</head>
+<body>
+  <script>
+    loadHeader();
+  </script>
+
+  <main>
+    <!-- Sección de Video -->
+    <div id="inicio" class="video-container">
+      <video muted autoplay loop>
+        <source src="imagenes y videos/videoFondo.mp4" type="video/mp4" />
+      </video>
+      <div class="capa"></div>
+      <div class="caja-h1">
+        <h1>Lo mejor en zapatillas importadas</h1>
+      </div>
+    </div>
+
+    <!-- Sección de Marcas -->
+<!-- Sección de Marcas -->
+    <h2 id="productosS" class="marcas-h2">Marcas que te ofrecemos</h2>
+    <section class="marcas-section">
+        <div class="marcas-carousel">
+            <div class="marcas-wrapper">
+                <img src="imagenes y videos/i-run.png" class="marca-item" alt="i-run" />
+                <img src="imagenes y videos/nike.png" class="marca-item" alt="nike" />
+                <img src="imagenes y videos/atletix.png" class="marca-item" alt="atletix" />
+                <img src="imagenes y videos/newAtletic.png" class="marca-item" alt="new atletic" />
+                <img src="imagenes y videos/adidas.png" class="marca-item" alt="adidas" />
+                <img src="imagenes y videos/punto.png" class="marca-item" alt="punto" />
+            </div>
+            <div class="marcas-wrapper">
+                <img src="imagenes y videos/i-run.png" class="marca-item" alt="i-run" />
+                <img src="imagenes y videos/nike.png" class="marca-item" alt="nike" />
+                <img src="imagenes y videos/atletix.png" class="marca-item" alt="atletix" />
+                <img src="imagenes y videos/newAtletic.png" class="marca-item" alt="new atletic" />
+                <img src="imagenes y videos/adidas.png" class="marca-item" alt="adidas" />
+                <img src="imagenes y videos/punto.png" class="marca-item" alt="punto" />
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- sección de novedades -->
+
+    <section class="novedades-destacados">
+        <h2 class="Novedades-h2">Novedades y destacados</h2>
+        <div class="productos-grid">
+            <div class="producto-card">
+                <img src="imagenes y videos/novedadZap1.png" alt="Nike Revolution 7">
+                <h3>Nike Revolution 7</h3>
+                <p>Zapatillas de running para mujer</p>
+                <p class="precio">S/ 219.00</p>
+            </div>
+            <div class="producto-card">
+                <img src="imagenes y videos/novedadZap2.png" alt="CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO">
+                <h3>CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO</h3>
+                <p class="precio">S/ 349.00</p>
+            </div>
+            <div class="producto-card">
+                <img src="imagenes y videos/novedadZap3.png" alt="Zapatillas Freestyle">
+                <h3>Zapatillas Freestyle</h3>
+                <p>I-RUN NIEVES COLORES</p>
+                <p class="precio">S/ 159.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Catálogo -->
+    <h4 class="subtitulo3">Catalogo</h4>
+    <section class="catalogo-section">
+      <aside class="filtros">
+        <div class="filtro-grupo">
+          <h4 class="subtitulos">Marcas</h4>
+          <label><input class="botones" type="checkbox" /> NIKE</label>
+          <label><input class="botones" type="checkbox" /> I-RUN</label>
+          <label><input class="botones" type="checkbox" /> Adidas</label>
+        </div>
+        <div class="filtro-grupo">
+          <h4 class="subtitulos">Precio</h4>
+          <input class="botonSlider" type="range" min="100" max="1000" style="width: 100%;" />
+        </div>
+        <div class="filtro-grupo">
+          <h4 class="subtitulos">Color</h4>
+          <label><input class="botones" type="checkbox" /> Negro</label>
+          <label><input class="botones" type="checkbox" /> Blanco</label>
+          <label><input class="botones" type="checkbox" /> Rojo</label>
+        </div>
+        <div class="filtro-grupo">
+          <h4 class="subtitulos">Género</h4>
+          <label><input class="botones" type="checkbox" /> Niños</label>
+          <label><input class="botones" type="checkbox" /> Mujer</label>
+          <label><input class="botones" type="checkbox" /> Hombre</label>
+        </div>
+      </aside>
+
+      <main class="productos-grid">
+
+        <div class="producto-item">
+          <img class="producto-image" src="imagenes y videos/novedadZap1.png" alt="Zapatilla 1" />
+          <h3>Nike Revolution 7</h3>
+          <span class="precio">S/ 219.90</span>
+        </div>
+        <div class="producto-item">
+          <img class="producto-image" src="imagenes y videos/novedadZap2.png" alt="Zapatilla 2" />
+          <h3>CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO</h3>
+          <span class="precio">S/ 359.00</span>
+        </div>
+        <div class="producto-item">
+          <img class="producto-image" src="imagenes y videos/novedadZap3.png" alt="Zapatilla 3" />
+          <h3>Zapatillas Freestyle</h3>
+          <span class="precio">S/ 159.00</span>
+        </div>
+        <div class="producto-item">
+          <img class="producto-image" src="imagenes y videos/zapatilla1.jpeg" alt="Zapatilla 4" />
+          <h3>Zapatilla I-run</h3>
+          <span class="precio">S/ 150.00</span>
+        </div>
+        <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/novedadZap1.png" alt="Zapatilla 1" />
+            <h3>Nike Revolution 7</h3>
+            <span class="precio">S/ 219.90</span>
+          </div>
+          <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/novedadZap2.png" alt="Zapatilla 2" />
+            <h3>CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO</h3>
+            <span class="precio">S/ 359.00</span>
+          </div>
+          <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/novedadZap3.png" alt="Zapatilla 3" />
+            <h3>Zapatillas Freestyle</h3>
+            <span class="precio">S/ 159.00</span>
+          </div>
+          <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/zapatilla1.jpeg" alt="Zapatilla 4" />
+            <h3>Zapatilla I-run</h3>
+            <span class="precio">S/ 150.00</span>
+          </div>
+          <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/novedadZap1.png" alt="Zapatilla 1" />
+            <h3>Nike Revolution 7</h3>
+            <span class="precio">S/ 219.90</span>
+          </div>
+          <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/novedadZap2.png" alt="Zapatilla 2" />
+            <h3>CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO</h3>
+            <span class="precio">S/ 359.00</span>
+          </div>
+          <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/novedadZap3.png" alt="Zapatilla 3" />
+            <h3>Zapatillas Freestyle</h3>
+            <span class="precio">S/ 159.00</span>
+          </div>
+          <div class="producto-item">
+            <img class="producto-image" src="imagenes y videos/zapatilla1.jpeg" alt="Zapatilla 4" />
+            <h3>Zapatilla I-run</h3>
+            <span class="precio">S/ 150.00</span>
+          </div>
+        <!-- Repite este div para más productos -->
+
+        <!-- Sección de "Paginación" -->
+
+
+      </main>
+
+    </section>
+    <div class="caja-paginacion">
+        <nav class="pagination">
+            <a href="#" class="prev">← Previous</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#">11</a>
+            <span class="ellipsis">...</span>
+            <a href="#" class="next">Next →</a>
+        </nav>
+    </div>
+
+  </main>
+  <script>
+    loadFooter();
+  </script>
+</body>
+</html>

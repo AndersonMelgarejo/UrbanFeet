@@ -1,0 +1,296 @@
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden; 
+  max-width: 100vw;     
+}
+
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  
+}
+h1{
+    user-select: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+}
+
+
+/* Encabezado */
+legend {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+legend h1 {
+  font-size: 2.2em;
+  color: white;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  animation: slide 10s infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%); /* Fuera de pantalla por la izquierda */
+  }
+  25% {
+    transform: translateX(0); /* Texto en el centro */
+  }
+  75% {
+    transform: translateX(0); /* Mantener el texto en el centro por unos segundos */
+  }
+  100% {
+    transform: translateX(100%); /* Fuera de pantalla por la derecha */
+  }
+}
+
+main {
+    min-height: 100vh;
+    position: relative;
+}
+.playfair-display-text {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+.caja-h1{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%; 
+    color: white;
+    font-size: 40px; 
+    font-weight: bold; 
+}
+
+.espacio{
+  margin: 50px 0;  
+}
+section {  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.desdeArr{
+    margin: 1px;
+}
+
+section h2 {
+  color: #111;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #444;
+}
+
+section p {
+  line-height: 1.6;
+  font-size: 1.2em;
+  color: #555;
+}
+.bodfirst{
+    font-weight: bold; 
+    text-align: center; 
+    font-size: 1.9em;  
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.bodfirst2do{
+    margin-left: 320px; 
+    margin-right: 320px;
+    text-align: center;
+    font-size: 21px;
+}
+
+
+
+.mission-vision-container {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px;
+  margin-top: 50px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 20px; 
+}
+
+.centrarImg{
+    display: block;
+    margin: 0 auto;
+    justify-content: center; 
+    align-items: center;
+    height: auto;
+}
+section img{
+    width: 400px; 
+    max-width: 100%;
+}
+
+.sobre{
+    flex: 1 1 200px; /* Crece, se encoge y tiene un tamaño base de 200px */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+
+.fondo2 .Nosotros {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+
+    font-weight: bold;
+}
+
+.caja-histo1{
+padding-left:  200px;
+padding-right: 200px;
+justify-content: center;
+}
+.caja-histo3{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.informacion{
+    padding: 20px 30px 10px 10px;
+    font-size: 20px;
+    font-family:sans-serif;
+    text-align: justify;
+}
+
+.caja-iconos{
+    padding-left: 10px;
+    width: 90%;
+    height: 40px;
+}
+
+.iconos{
+    padding-top: 7px;
+    padding-right: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+
+.informacion-izq{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.imagen-der{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.imagen1{
+    width: 100%;
+    height: 90%;
+}
+
+
+
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .bodfirst, .bodfirst2do, .histo-section p {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  
+  .mission-vision-container {
+    flex-direction: row;
+  }
+}
+/* Ajustes para dispositivos móviles de hasta 360px */
+@media (min-width: 360px) and (max-width: 428px) {
+  .bodfirst, .bodfirst2do {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+  }
+
+
+
+  .caja-histo1 {
+    width: 90%;
+    height: auto;
+    padding-left:  20px;
+    padding-right: 0px;
+  }
+  
+
+  .informacion-izq, .imagen-der {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  .imagen1 {
+    width: 80%;
+    height: auto;
+  }
+
+  .mission-vision-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

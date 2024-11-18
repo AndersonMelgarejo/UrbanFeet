@@ -1,0 +1,352 @@
+body {
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+.contenedor {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botones {
+    display: flex;
+    justify-content: center;
+
+}
+.botones button {
+      margin-right: 10px;
+}
+.contenido {
+      display: none;
+      margin-top: 10px;
+}
+.activo {
+      display: block;
+}
+.contact-info{
+  margin-top: 100px;
+}
+    
+
+.multi_tam{
+    
+    width: 280px; /* Establece un ancho fijo */
+    height: 280px; /* Altura automática según el contenido */
+    max-width: 100%; /* No exceder el 100% del contenedor */
+    min-height: 100px; /* Altura mínima */
+    padding: 10px; /* Espacio interno */
+    margin: 0 10px; /* Espacio externo entre elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+
+}
+
+.multi_fono{
+    width:80px; /* Establece un ancho fijo */
+    height: 120px; /* Altura automática según el contenido */
+    max-width: 100%; /* No exceder el 100% del contenedor */
+    min-height: 100px; /* Altura mínima */
+    padding: 10px; /* Espacio interno */
+    margin: 0 10px; /* Espacio externo entre elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ 
+}
+
+.multi_gmail{
+    width:120px; /* Establece un ancho fijo */
+    height: 80px; /* Altura automática según el contenido */
+    max-width: 100%; /* No exceder el 100% del contenedor */
+    min-height: 100px; /* Altura mínima */
+    padding: 10px; /* Espacio interno */
+    margin: 0 10px; /* Espacio externo entre elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ 
+}
+
+.contacto {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.subtitu{
+ text-align: center;
+}
+.open-sans-text {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 21px;
+  
+}
+.imghelp{
+    width:200px; /* Establece un ancho fijo */
+    height: 200px; /* Altura automática según el contenido */
+    max-width: 100%; /* No exceder el 100% del contenedor */
+    min-height: 100px; /* Altura mínima */
+    padding: 10px; /* Espacio interno */
+    margin: 0 10px; /* Espacio externo entre elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ 
+}
+
+
+.resaltar {
+    font-size: 1.2em;
+    color: #ff5733;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex; /* Cambiar a flexbox para alinearlos en una fila */
+    justify-content: center; /* Espacio alrededor de los elementos */
+    margin-bottom: 20px; /* Espacio inferior para separar de los botones */
+    align-items: center;  
+}
+
+.info-item {
+    padding: 12px;
+    width: auto; /* Cambiar a auto para que se ajuste al contenido */
+    height: auto; /* Cambiar a auto para que se ajuste al contenido */
+    margin: 0; /* Eliminar márgenes para reducir espacio */
+    text-align: center; /* Alinear el texto al centro */
+}
+
+
+.info-item i {
+    font-size: 30px;
+    color: #ff5733;
+    margin-bottom: 10px;
+}
+
+.info-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+
+}
+
+.info-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+
+    
+
+
+.contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+  width: 100%;
+  max-width: 600px; /* Ajusta este valor según el tamaño deseado */
+  margin: 0 auto;
+  border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea, input[type="text"], input[type="email"], input[type="date"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;  
+  box-sizing: border-box;
+  resize: none; /* block area*/
+}
+
+
+.contact-form button {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e64c2c;
+}
+
+
+
+
+/* Estilos de la sección de sugerencias */
+.sugerencias {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.sugerencias h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.sugerencias-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-item {
+    margin-bottom: 15px;
+}
+
+.form-item label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-item textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.sugerencias-form button {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sugerencias-form button:hover {
+    background-color: #e64c2c;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+.botones button {
+    background-color: #ff5733; /* Color de fondo */
+  border: none; /* Sin borde */
+  color: white; /* Texto en blanco */
+  padding: 15px 32px; /* Espaciado interno */
+  text-align: center; /* Centrar texto */
+  text-decoration: none; /* Sin subrayado */
+  display: inline-block; /* Mostrar en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen */
+  transition-duration: 0.4s; /* Duración de la transición */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+.botones button:hover {
+  background-color: white; /* Color de fondo al pasar por encima */
+  color: black; /* Color de texto al pasar por encima */
+  border: 1px solid #ff5733; /* Borde verde */
+}
+
+p{
+    margin:0px;
+}
+
+
+@media (min-width: 360px) and (max-width: 428px)  {
+  .contenedor {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .multi_fono{
+      width:70px; /* Establece un ancho fijo */
+    height: 80px; /* Altura automática según el contenido */
+    max-width: 100%; /* No exceder el 100% del contenedor */
+    min-height: 100px; /* Altura mínima */
+    padding: 10px; /* Espacio interno */
+    margin: 0 10px; /* Espacio externo entre elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ 
+  }
+  
+  .multi_gmail{
+      width:100px; /* Establece un ancho fijo */
+    height: 80px; /* Altura automática según el contenido */
+    max-width: 100%; /* No exceder el 100% del contenedor */
+    min-height: 100px; /* Altura mínima */
+    padding: 10px; /* Espacio interno */
+    margin: 0 10px; /* Espacio externo entre elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */ 
+  }
+
+  .contact-info {
+    flex-direction: column; /* Los elementos de contacto se apilan en lugar de estar en fila */
+    align-items: center;
+  }
+
+  .contact-form, .sugerencias-form {
+    max-width: 300px; /* Ancho completo en dispositivos móviles */
+    padding: 15px; /* Reducir el padding */
+  }
+
+  .botones {
+    flex-direction: column; /* Los botones se apilan en lugar de estar en fila */
+    width: 100%;
+  }
+
+  .botones button {
+    width: 100%; /* Botones ocupan todo el ancho */
+    margin: 10px 0; /* Espaciado entre los botones */
+  }
+
+  textarea, input[type="text"], input[type="email"], input[type="date"] {
+    padding: 8px; /* Reducir el padding para un mejor ajuste */
+    font-size: 16px; /* Ajustar el tamaño de fuente */
+  }
+
+  .open-sans-text {
+    font-size: 18px; /* Tamaño de texto más pequeño */
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  h2, h3 {
+    font-size: 1.5em; /* Ajustar los títulos para pantallas más pequeñas */
+  }
+
+  p {
+    font-size: 1em; /* Ajustar el tamaño de fuente */
+  }
+}

@@ -1,0 +1,363 @@
+.catalogo-section {
+    display: flex; /* Usar Flexbox para la disposición de filtros y productos */
+    padding: 2rem 0;
+    background-color: #f2f2f2;
+}
+
+.filtros {
+    width: 250px; /* Mantener el ancho fijo de los filtros */
+    padding: 1rem;
+    background-color: #fafafa;
+    border-radius: 10px; 
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.filtro-grupo {
+    margin-bottom: 2rem;
+}
+
+.filtro-grupo label {
+    display: block;
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.filtro-grupo select,
+.filtro-grupo .botones {
+    width: 100%; 
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.productos-grid {
+    flex: 1; /* Ocupa el espacio restante */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.producto-item {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.producto-item:hover {
+    transform: scale(1.05);
+}
+
+.producto-image {
+    height: auto;
+    max-height: 250px; 
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+/* Resto de tu CSS sin cambios */
+
+.marcas-h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 30px;
+    padding-left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #ececec;
+}
+.marcas-section {
+    padding: 2rem 0;
+    background-color: #ececec;
+    overflow: hidden; /* Oculta las marcas que no caben */
+}
+
+.marcas-carousel {
+    display: flex;
+    width: 100%;
+    animation: slider 20s linear infinite;
+}
+
+.marcas-wrapper {
+    display: flex;
+    min-width: 100%;
+    height: auto;
+}
+
+.marca-item {
+    width: 20%; /* Ajusta el ancho para que haya espacio */
+    height: auto;
+    max-height: 230px;
+    background-color: #fff;
+    margin: 0 0.5rem; /* Espaciado entre las marcas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    opacity: 1; /* Comienza visible */
+    transition: opacity 0.5s; /* Transición para la opacidad */
+}
+
+.marca-item.hidden {
+    opacity: 0; /* Cuando se oculta, establece la opacidad en 0 */
+}
+
+
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Cambia para que se desplace completamente */
+    }
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .marca-item {
+        width: 30%; /* Cambia el ancho para adaptarse mejor */
+    }
+}
+
+@media (max-width: 480px) {
+    .marca-item {
+        width: 40%; /* Cambia el ancho para adaptarse mejor */
+    }
+}
+
+
+
+
+.novedades-section {
+    padding: 2rem 0;
+    background-color: #fafafa;
+}
+
+.novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem; 
+}
+
+.novedad-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.novedad-item:hover {
+    transform: scale(1.05);
+}
+
+.novedad-image {
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.subtitulo3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.novedades-destacados {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.novedades-destacados h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 30px;
+    padding-left: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #ececec;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto-item {
+    animation: scaleDown 0.3s ease-in-out; /* Aplicando la animación */
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.producto-card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.producto-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.producto-card .precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Media Queries para ocultar los filtros en pantallas pequeñas */
+@media (max-width: 870px) {
+    .filtros {
+        display: none; /* Oculta la sección de filtros */
+    }
+}
+
+/* Ajustes para la grilla de productos en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr; /* Un solo elemento por fila */
+    }
+}
+.caja-paginacion {
+    width: 100%;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.pagination {
+    width: 100%; /* Cambiar a 100% para adaptarse mejor */
+    max-width: 800px; /* Máxima anchura para mantener la alineación en pantallas grandes */
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin: auto;
+    overflow: hidden; /* Evitar que los elementos se salgan de la caja */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan */
+    justify-content: space-between; /* Espaciado entre elementos */
+}
+
+.pagination a, .pagination span {
+    color: #333;
+    text-decoration: none;
+    padding: 6px 10px;
+    margin: 0 2px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    flex-shrink: 0; /* Evitar que los enlaces se reduzcan */
+}
+
+.pagination a:hover {
+    background-color: #e9ecef;
+}
+
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination .ellipsis {
+    color: #6c757d;
+}
+
+.pagination .prev, .pagination .next {
+    font-weight: normal;
+}
+
+.pagination .prev {
+    margin-right: 5px;
+}
+
+.pagination .next {
+    margin-left: 5px;
+}
+
+/* Media Queries para hacer la paginación responsive */
+@media (max-width: 600px) {
+    .pagination {
+        flex-wrap: nowrap; /* Mantener elementos en una sola línea */
+        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+    }
+
+    .pagination a, .pagination span {
+        padding: 4px 6px; /* Reducir el tamaño de los botones */
+        margin: 0 1px; /* Reducir margen para que quepan más elementos */
+    }
+
+    .pagination .ellipsis {
+        display: none; /* Ocultar los puntos suspensivos en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 400px) {
+    .pagination a:nth-child(n+8) {
+        display: none; /* Ocultar números a partir de cierto punto */
+    }
+}

@@ -1,0 +1,67 @@
+.footer {
+    width: 100%;
+    height: auto;
+    padding: var(--sds-size-space-800);
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+}
+
+.footer-box {
+    flex: 1;
+    margin: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerMenu {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.MenuOpciones {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.MenuOpciones ol {
+    margin: 8px 0;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.MenuOpciones ol:hover {
+    color: #ff9;
+}
+
+.footer-rights {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    opacity: 0.95;
+}
+
+@media (max-width: 420px) {
+    .footer {
+        
+        align-items: center; /* Centra el contenido */
+    }
+
+    .footer-box {
+        width: 90%; /* Asegura que las cajas no se salgan del contenedor */
+        margin: 10px 0; /* Espaciado vertical entre las cajas */
+        padding: 0;
+    }
+
+    .footerMenu {
+        font-size: 1rem; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+}
