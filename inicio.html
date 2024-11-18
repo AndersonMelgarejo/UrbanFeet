@@ -7,14 +7,13 @@
   <link rel="stylesheet" href="disenio.css">
   <link rel="stylesheet" href="productos.css">
   <link rel="stylesheet" href="Footer.css">
-  <script src="funcionHeader.js" ></script>
+  <script src="funcionHeader.js"></script>
   <script src="funcionFooter.js"></script>
   <script src="pagination.js"></script>
-
 </head>
 <body>
   <script>
-    loadHeader();
+    loadHeader();  // Asegurándote de cargar el encabezado correctamente
   </script>
 
   <main>
@@ -30,7 +29,6 @@
     </div>
 
     <!-- Sección de Marcas -->
-<!-- Sección de Marcas -->
     <h2 id="productosS" class="marcas-h2">Marcas que te ofrecemos</h2>
     <section class="marcas-section">
         <div class="marcas-carousel">
@@ -53,13 +51,10 @@
         </div>
     </section>
 
-
-
     <!-- sección de novedades -->
-
     <section class="novedades-destacados">
         <h2 class="Novedades-h2">Novedades y destacados</h2>
-        <div class="productos-grid">
+        <div class="novedades-grid">
             <div class="producto-card">
                 <img src="imagenes y videos/novedadZap1.png" alt="Nike Revolution 7">
                 <h3>Nike Revolution 7</h3>
@@ -109,75 +104,11 @@
       </aside>
 
       <main class="productos-grid">
-
-        <div class="producto-item">
-          <img class="producto-image" src="imagenes y videos/novedadZap1.png" alt="Zapatilla 1" />
-          <h3>Nike Revolution 7</h3>
-          <span class="precio">S/ 219.90</span>
-        </div>
-        <div class="producto-item">
-          <img class="producto-image" src="imagenes y videos/novedadZap2.png" alt="Zapatilla 2" />
-          <h3>CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO</h3>
-          <span class="precio">S/ 359.00</span>
-        </div>
-        <div class="producto-item">
-          <img class="producto-image" src="imagenes y videos/novedadZap3.png" alt="Zapatilla 3" />
-          <h3>Zapatillas Freestyle</h3>
-          <span class="precio">S/ 159.00</span>
-        </div>
-        <div class="producto-item">
-          <img class="producto-image" src="imagenes y videos/zapatilla1.jpeg" alt="Zapatilla 4" />
-          <h3>Zapatilla I-run</h3>
-          <span class="precio">S/ 150.00</span>
-        </div>
-        <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/novedadZap1.png" alt="Zapatilla 1" />
-            <h3>Nike Revolution 7</h3>
-            <span class="precio">S/ 219.90</span>
-          </div>
-          <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/novedadZap2.png" alt="Zapatilla 2" />
-            <h3>CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO</h3>
-            <span class="precio">S/ 359.00</span>
-          </div>
-          <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/novedadZap3.png" alt="Zapatilla 3" />
-            <h3>Zapatillas Freestyle</h3>
-            <span class="precio">S/ 159.00</span>
-          </div>
-          <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/zapatilla1.jpeg" alt="Zapatilla 4" />
-            <h3>Zapatilla I-run</h3>
-            <span class="precio">S/ 150.00</span>
-          </div>
-          <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/novedadZap1.png" alt="Zapatilla 1" />
-            <h3>Nike Revolution 7</h3>
-            <span class="precio">S/ 219.90</span>
-          </div>
-          <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/novedadZap2.png" alt="Zapatilla 2" />
-            <h3>CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO</h3>
-            <span class="precio">S/ 359.00</span>
-          </div>
-          <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/novedadZap3.png" alt="Zapatilla 3" />
-            <h3>Zapatillas Freestyle</h3>
-            <span class="precio">S/ 159.00</span>
-          </div>
-          <div class="producto-item">
-            <img class="producto-image" src="imagenes y videos/zapatilla1.jpeg" alt="Zapatilla 4" />
-            <h3>Zapatilla I-run</h3>
-            <span class="precio">S/ 150.00</span>
-          </div>
-        <!-- Repite este div para más productos -->
-
-        <!-- Sección de "Paginación" -->
-
-
+        <!-- Los productos se cargarán dinámicamente aquí -->
       </main>
-
     </section>
+
+    <!-- Sección de Paginación -->
     <div class="caja-paginacion">
         <nav class="pagination">
             <a href="#" class="prev">← Previous</a>
@@ -198,8 +129,12 @@
     </div>
 
   </main>
+
   <script>
-    loadFooter();
+    loadFooter();  // Asegurándote de cargar el pie de página correctamente
   </script>
+  
+
+  <script src="productos.js"></script>  <!-- Este script es donde gestionas la carga de productos -->
 </body>
 </html>

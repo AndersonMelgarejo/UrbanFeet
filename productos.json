@@ -1,0 +1,48 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Nike Revolution 7",
+            "precio": 219.90,
+            "imagen": "imagenes y videos/novedadZap1.png",
+            "descripcion": "Zapatillas de running para mujer",
+            "marca": "NIKE",
+            "categoria": "Running",
+            "genero": "Mujer",
+            "colores": ["Negro", "Blanco"]
+        },
+        {
+            "id": 2,
+            "nombre": "CHIMPUNES PREDATOR LEAGUE PASTO SINTÉTICO",
+            "precio": 359.00,
+            "imagen": "imagenes y videos/novedadZap2.png",
+            "descripcion": "Chimpunes profesionales",
+            "marca": "Adidas",
+            "categoria": "Fútbol",
+            "genero": "Hombre",
+            "colores": ["Negro", "Rojo"]
+        },
+        {
+            "id": 3,
+            "nombre": "Zapatillas Freestyle",
+            "precio": 159.00,
+            "imagen": "imagenes y videos/novedadZap3.png",
+            "descripcion": "I-RUN NIEVES COLORES",
+            "marca": "I-RUN",
+            "categoria": "Casual",
+            "genero": "Unisex",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 4,
+            "nombre": "Zapatilla I-run",
+            "precio": 150.00,
+            "imagen": "imagenes y videos/zapatilla1.jpeg",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "I-RUN",
+            "categoria": "Deportivo",
+            "genero": "Unisex",
+            "colores": ["Blanco"]
+        }
+    ]
+}
