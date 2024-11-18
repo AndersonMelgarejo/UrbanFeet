@@ -1,3 +1,7 @@
+let paginaActual = 1;
+const productosPorPagina = 15;
+let productosGlobales = [];
+
 // Función para cargar los productos desde el JSON
 async function cargarProductos() {
     try {
@@ -6,19 +10,25 @@ async function cargarProductos() {
             throw new Error('No se pudo cargar los productos');
         }
         const data = await response.json();
-        mostrarProductos(data.productos);
+        productosGlobales = data.productos;
+        mostrarProductos(productosGlobales, paginaActual);
+        actualizarPaginacion(productosGlobales.length);
     } catch (error) {
         console.error('Error al cargar los productos:', error);
         mostrarError();
     }
 }
 
-// Función para mostrar los productos en el grid
-function mostrarProductos(productos) {
+// Función para mostrar los productos de acuerdo con la página actual
+function mostrarProductos(productos, pagina) {
     const productosGrid = document.querySelector('.productos-grid');
     productosGrid.innerHTML = ''; // Limpiar el contenedor
 
-    productos.forEach(producto => {
+    const inicio = (pagina - 1) * productosPorPagina;
+    const fin = inicio + productosPorPagina;
+    const productosPagina = productos.slice(inicio, fin); // Obtener solo los productos correspondientes a la página
+
+    productosPagina.forEach(producto => {
         const productoHTML = crearProductoHTML(producto);
         productosGrid.innerHTML += productoHTML;
     });
@@ -51,13 +61,57 @@ function mostrarError() {
     `;
 }
 
-// Inicializar la carga de productos cuando el documento esté listo
+// Función para actualizar los botones de paginación
+function actualizarPaginacion(totalProductos) {
+    const totalPaginas = Math.ceil(totalProductos / productosPorPagina);
+    const pagination = document.querySelector('.pagination');
+    pagination.innerHTML = ''; // Limpiar los botones de paginación
+
+    // Botón de 'anterior'
+    const prevButton = document.createElement('a');
+    prevButton.href = '#';
+    prevButton.classList.add('prev');
+    prevButton.textContent = '← Previous';
+    prevButton.onclick = () => cambiarPagina(paginaActual - 1);
+    pagination.appendChild(prevButton);
+
+    // Botones de páginas
+    for (let i = 1; i <= totalPaginas; i++) {
+        const pageButton = document.createElement('a');
+        pageButton.href = '#';
+        pageButton.textContent = i;
+        pageButton.classList.toggle('active', i === paginaActual);
+        pageButton.onclick = () => cambiarPagina(i);
+        pagination.appendChild(pageButton);
+    }
+
+    // Botón de 'siguiente'
+    const nextButton = document.createElement('a');
+    nextButton.href = '#';
+    nextButton.classList.add('next');
+    nextButton.textContent = 'Next →';
+    nextButton.onclick = () => cambiarPagina(paginaActual + 1);
+    pagination.appendChild(nextButton);
+}
+
+// Función para cambiar la página
+function cambiarPagina(pagina) {
+    const totalPaginas = Math.ceil(productosGlobales.length / productosPorPagina);
+    if (pagina < 1) pagina = 1;
+    if (pagina > totalPaginas) pagina = totalPaginas;
+
+    paginaActual = pagina;
+    mostrarProductos(productosGlobales, paginaActual);
+    actualizarPaginacion(productosGlobales.length);
+}
+
+
 document.addEventListener('DOMContentLoaded', cargarProductos);
 
-// Agregar listener para los filtros (ejemplo básico)
+
 document.querySelectorAll('.filtros input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', function() {
-        // Aquí puedes agregar la lógica de filtrado
+
         console.log('Filtro cambiado:', this.parentElement.textContent.trim());
     });
 });
