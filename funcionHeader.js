@@ -33,31 +33,22 @@ function loadHeader() {
       </div>
     `;
 
-    document.body.prepend(header);
-
-
-    const menuIcono = document.getElementById('menu-icono');
-    const navbar = document.querySelector('.navbar');
-    const storedName = localStorage.getItem('name');
-    if (storedName) {
-      // Actualizar el contenido del elemento welcomeMessage
-      document.getElementById('welcomeMessage').textContent = `Hola ${storedName.toUpperCase()}`;
-      document.getElementById('welcomeMessage').style.display = 'inline'; // Mostrar el mensaje
-      document.getElementById('loginButton').style.display = 'none'; // Ocultar el botón de iniciar sesión
-    } else {
-      // Si no hay nombre almacenado, mostrar el botón de iniciar sesión
+    document.body.prepend(header); 
+    const menuIcono = document.getElementById('menu-icono'); 
+    const navbar = document.querySelector('.navbar'); 
+    const storedName = localStorage.getItem('name'); 
+    if (storedName) { document.getElementById('welcomeMessage').textContent = `Hola ${storedName.toUpperCase()}`;
+     document.getElementById('welcomeMessage').style.display = 'inline';
+      document.getElementById('loginButton').style.display = 'none'; 
+    } else { 
       document.getElementById('loginButton').style.display = 'inline';
-      document.getElementById('welcomeMessage').style.display = 'none'; // Ocultar el mensaje de bienvenida
-    }
-    menuIcono.addEventListener('click', () => {
-        navbar.classList.toggle('active'); // Alterna la clase active en el menú
-    });
-
-    var isLoggedIn = localStorage.getItem("loggedIn");
-
-    if (isLoggedIn) {
-        // Reemplaza el botón por el mensaje "Hola Admin"
-        document.getElementById("loginButton").style.display = "none";
-        document.getElementById("welcomeMessage").style.display = "inline";
-    }
+       document.getElementById('welcomeMessage').style.display = 'none';
+    } 
+    menuIcono.addEventListener('click', () => { navbar.classList.toggle('active'); });
+    document.addEventListener('click', (event) => { 
+      if (!navbar.contains(event.target) && !menuIcono.contains(event.target)) {
+         navbar.classList.remove('active'); } });
+          var isLoggedIn = localStorage.getItem("loggedIn");
+           if (isLoggedIn) { document.getElementById("loginButton").style.display = "none";
+             document.getElementById("welcomeMessage").style.display = "inline"; }
 }

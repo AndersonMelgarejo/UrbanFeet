@@ -134,17 +134,18 @@ header {
     display: flex; /* Muestra el menú cuando se activa */
     position: fixed; /* Fijo para que cubra toda la pantalla */
     top: 0;
-    left: 0;
+    right: 0;
     bottom: 0;
-    background-color: black; /* Fondo oscuro sin opacidad */
+    background-color: #333; /* Fondo oscuro sin opacidad */
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     justify-content: flex-start; /* Alinea el contenido desde el top */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    align-items: end; /* Alinea los elementos a la izquierda */
     padding: 20px;
-    width: 250px;
+    width: 200px;
     z-index: 1000;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
+    font-size: 2rem;
 }
 
 .navbar.active ul {
@@ -153,11 +154,15 @@ header {
     list-style: none; /* Elimina el estilo de lista por defecto */
     padding: 0; /* Elimina padding */
     margin: 0; /* Elimina margin */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */    
+    align-items: end; 
 }
 
 .navbar.active ul li {
     margin: 10px 0; /* Espacio entre los elementos del menú */
+}
+navbar active{
+    align-items: end; 
 }
 
 @media (max-width: 991px) {
@@ -175,6 +180,12 @@ header {
 
     .content {
         min-height: 70px;
+    }
+    li{
+        align-items: end;
+    }
+    .menu .navbar ul li a {
+        font-size: 22px;        
     }
 }
 

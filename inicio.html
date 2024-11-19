@@ -7,15 +7,19 @@
   <link rel="stylesheet" href="disenio.css">
   <link rel="stylesheet" href="productos.css">
   <link rel="stylesheet" href="Footer.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="funcionHeader.js"></script>
   <script src="funcionFooter.js"></script>
   <script src="pagination.js"></script>
 </head>
-<body>
+<body style="background: #ececec">
   <script>
     loadHeader();  // Asegurándote de cargar el encabezado correctamente
   </script>
-
+<script>
+  AOS.init();
+</script>
   <main>
     <!-- Sección de Video -->
     <div>
@@ -35,33 +39,59 @@
     </div>
     </div>
 
-    <!-- Sección de Marcas -->
-    <h2 id="productosS" class="marcas-h2">Marcas que te ofrecemos</h2>
-    <section class="marcas-section">
-        <div class="marcas-carousel">
-            <div class="marcas-wrapper">
-                <img src="imagenes y videos/i-run.png" class="marca-item" alt="i-run" />
-                <img src="imagenes y videos/nike.png" class="marca-item" alt="nike" />
-                <img src="imagenes y videos/atletix.png" class="marca-item" alt="atletix" />
-                <img src="imagenes y videos/newAtletic.png" class="marca-item" alt="new atletic" />
-                <img src="imagenes y videos/adidas.png" class="marca-item" alt="adidas" />
-                <img src="imagenes y videos/punto.png" class="marca-item" alt="punto" />
+    <!-- Sección de Marcas -->    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<section  class="marcas-section">
+  <h2 data-aos="zoom-in-down" id="productosS" class="marcas-h2">Marcas que te ofrecemos</h2>
+    <div data-aos="zoom-in-down" class="carr">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="imagenes y videos/i-run.png" alt="">
             </div>
-            <div class="marcas-wrapper">
-                <img src="imagenes y videos/i-run.png" class="marca-item" alt="i-run" />
-                <img src="imagenes y videos/nike.png" class="marca-item" alt="nike" />
-                <img src="imagenes y videos/atletix.png" class="marca-item" alt="atletix" />
-                <img src="imagenes y videos/newAtletic.png" class="marca-item" alt="new atletic" />
-                <img src="imagenes y videos/adidas.png" class="marca-item" alt="adidas" />
-                <img src="imagenes y videos/punto.png" class="marca-item" alt="punto" />
+            <div class="slide">
+                <img src="imagenes y videos/nike.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/atletix.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/newAtletic.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/adidas.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/punto.png" alt="">
+            </div>
+            
+            <div class="slide">
+                <img src="imagenes y videos/i-run.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/nike.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/atletix.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/newAtletic.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/adidas.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="imagenes y videos/punto.png" alt="">
             </div>
         </div>
-    </section>
+    </div>
+    
+</section>
+
 
     <!-- sección de novedades -->
-    <section class="novedades-destacados">
-        <h2 class="Novedades-h2">Novedades y destacados</h2>
-        <div class="novedades-grid">
+    <section  class="novedades-destacados">
+        <h2 data-aos="zoom-in-down" class="Novedades-h2">Novedades y destacados</h2>
+        <div data-aos="zoom-in-down"class="novedades-grid">
             <div class="producto-card">
                 <img src="imagenes y videos/novedadZap1.png" alt="Nike Revolution 7">
                 <h3>Nike Revolution 7</h3>
@@ -83,7 +113,7 @@
     </section>
 
     <!-- Sección de Catálogo -->
-    <h4 class="subtitulo3">Catalogo</h4>
+    <h4 data-aos="zoom-in-down" class="subtitulo3">Catalogo</h4>
     <section class="catalogo-section">
       <aside class="filtros">
         <div class="filtro-grupo">
