@@ -43,17 +43,6 @@
             "categoria": "Deportivo",
             "genero": "Unisex",
             "colores": ["Blanco"]
-        },
-        {
-            "id": 5,
-            "nombre": "Zapatillas Tyshawn",
-            "precio": 499.00,
-            "imagen": "imagenes y videos/zapatilla1.jpeg",
-            "descripcion": "sssss",
-            "marca": "Adidas",
-            "categoria": "Deportivas/Calzado de Skateboarding",
-            "genero": "Unisex",
-            "colores": ["Blanco"]
-        }
+        }        
     ]
 }

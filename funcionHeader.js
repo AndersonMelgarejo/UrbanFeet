@@ -10,7 +10,7 @@ function loadHeader() {
     header.innerHTML = `
       <div class="content">
         <div class="menu container">
-          <img src="imagenes y videos/Urban_Feet_logo.png" alt="logo" class="imgLogo" />
+          <a href="inicio.html"><img src="imagenes y videos/Urban_Feet_logo.png" alt="logo" class="imgLogo" /></a>
           <div class="menu-icono" id="menu-icono">
             <span></span>
             <span></span>
