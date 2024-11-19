@@ -11,7 +11,7 @@ function loadHeader() {
   header.innerHTML = `
     <div class="content">
       <div class="menu container">
-        <img src="imagenes y videos/Urban_Feet_logo.png" alt="logo" class="imgLogo" />
+        <a href="inicio.html"><img src="imagenes y videos/Urban_Feet_logo.png" alt="logo" class="imgLogo" /></a>
         <div class="menu-icono" id="menu-icono">
           <span></span>
           <span></span>
@@ -39,9 +39,9 @@ function loadHeader() {
           </ul>
         </nav>
       </div>
+      <script src="script.js"></script>
     </div>
-  `;
-
+    `;
   document.body.prepend(header);
 
   // Lógica de interacción
@@ -57,9 +57,13 @@ function loadHeader() {
       document.getElementById('welcomeMessage').style.display = 'none';
   }
 
-  menuIcono.addEventListener('click', () => {
-      navbar.classList.toggle('active');
-  });
+  menuIcono.addEventListener('click', () => { navbar.classList.toggle('active'); });
+    document.addEventListener('click', (event) => { 
+      if (!navbar.contains(event.target) && !menuIcono.contains(event.target)) {
+         navbar.classList.remove('active'); } });
+          var isLoggedIn = localStorage.getItem("loggedIn");
+           if (isLoggedIn) { document.getElementById("loginButton").style.display = "none";
+             document.getElementById("welcomeMessage").style.display = "inline"; }
 
   const isLoggedIn = localStorage.getItem("loggedIn");
   if (isLoggedIn) {
