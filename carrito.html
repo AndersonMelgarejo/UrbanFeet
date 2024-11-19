@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Urban Feet</title>
+    <link rel="stylesheet" href="carrito.css">
+    <script src="funcionHeader.js"></script> <!-- Cargar el header -->
+</head>
+<body>
+    <script>loadHeader();</script> <!-- Función para cargar el header dinámicamente -->
+
+    <main class="carrito-container">
+        <h1>Tu Carrito</h1>
+        <div id="carrito-productos" class="lista-productos">
+            <!-- Los productos del carrito se insertarán aquí dinámicamente -->
+        </div>
+        
+        <div class="resumen-carrito">
+            <h2>Resumen de Compra</h2>
+            <div class="detalle-compra">
+                <p>Subtotal: <span id="subtotal">S/ 0.00</span></p>
+            </div>
+            <button id="vaciar-carrito" class="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </main>
+
+    <script src="productos.js"></script> <!-- Cargar los productos -->
+    <script src="carrito.js"></script> <!-- Cargar la lógica del carrito -->
+</body>
+</html>
+

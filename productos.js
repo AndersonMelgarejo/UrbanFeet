@@ -1,8 +1,8 @@
 let paginaActual = 1;
-const productosPorPagina = 15;
+const productosPorPagina = 12;
 let productosGlobales = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-// Función para cargar los productos desde el JSON
 async function cargarProductos() {
     try {
         const response = await fetch('productos.json');
@@ -19,14 +19,13 @@ async function cargarProductos() {
     }
 }
 
-// Función para mostrar los productos de acuerdo con la página actual
 function mostrarProductos(productos, pagina) {
     const productosGrid = document.querySelector('.productos-grid');
     productosGrid.innerHTML = ''; // Limpiar el contenedor
 
     const inicio = (pagina - 1) * productosPorPagina;
     const fin = inicio + productosPorPagina;
-    const productosPagina = productos.slice(inicio, fin); // Obtener solo los productos correspondientes a la página
+    const productosPagina = productos.slice(inicio, fin);
 
     productosPagina.forEach(producto => {
         const productoHTML = crearProductoHTML(producto);
@@ -34,7 +33,6 @@ function mostrarProductos(productos, pagina) {
     });
 }
 
-// Función para crear el HTML de cada producto
 function crearProductoHTML(producto) {
     return `
         <div class="producto-item" data-id="${producto.id}">
@@ -46,11 +44,77 @@ function crearProductoHTML(producto) {
             <p class="descripcion">${producto.descripcion}</p>
             <span class="marca">${producto.marca}</span>
             <span class="precio">S/ ${producto.precio.toFixed(2)}</span>
+            <button class="agregar-carrito" data-id="${producto.id}" onclick="agregarAlCarrito(${producto.id})">Añadir al carrito</button>
         </div>
     `;
 }
 
-// Función para mostrar un mensaje de error
+function agregarAlCarrito(productId) {
+    const producto = productosGlobales.find(p => p.id === productId);
+    if (producto) {
+        const productoEnCarrito = carrito.find(p => p.id === producto.id);
+        if (!productoEnCarrito) {
+            carrito.push(producto);
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert('Producto añadido al carrito');
+            actualizarCarrito(); // Llama a la función para reflejar los cambios
+        } else {
+            alert('Este producto ya está en tu carrito.');
+        }
+    }
+}
+
+function actualizarPaginacion(totalProductos) {
+    const totalPaginas = Math.ceil(totalProductos / productosPorPagina);
+    const pagination = document.querySelector('.pagination');
+    pagination.innerHTML = '';
+
+    const prevButton = document.createElement('a');
+    prevButton.href = '#';
+    prevButton.classList.add('prev');
+    prevButton.textContent = '← Previous';
+    prevButton.onclick = (e) => {
+        e.preventDefault();
+        cambiarPagina(paginaActual - 1);
+    };
+    pagination.appendChild(prevButton);
+
+    for (let i = 1; i <= totalPaginas; i++) {
+        const pageButton = document.createElement('a');
+        pageButton.href = '#';
+        pageButton.textContent = i;
+        pageButton.classList.toggle('active', i === paginaActual);
+        pageButton.onclick = (e) => {
+            e.preventDefault();
+            cambiarPagina(i);
+        };
+        pagination.appendChild(pageButton);
+    }
+
+    const nextButton = document.createElement('a');
+    nextButton.href = '#';
+    nextButton.classList.add('next');
+    nextButton.textContent = 'Next →';
+    nextButton.onclick = (e) => {
+        e.preventDefault();
+        cambiarPagina(paginaActual + 1);
+    };
+    pagination.appendChild(nextButton);
+}
+
+function cambiarPagina(pagina) {
+    const totalPaginas = Math.ceil(productosGlobales.length / productosPorPagina);
+    if (pagina < 1) pagina = 1;
+    if (pagina > totalPaginas) pagina = totalPaginas;
+
+    paginaActual = pagina;
+    mostrarProductos(productosGlobales, paginaActual);
+    actualizarPaginacion(productosGlobales.length);
+
+    const productosGrid = document.querySelector('.productos-grid');
+    productosGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function mostrarError() {
     const productosGrid = document.querySelector('.productos-grid');
     productosGrid.innerHTML = `
@@ -61,57 +125,7 @@ function mostrarError() {
     `;
 }
 
-// Función para actualizar los botones de paginación
-function actualizarPaginacion(totalProductos) {
-    const totalPaginas = Math.ceil(totalProductos / productosPorPagina);
-    const pagination = document.querySelector('.pagination');
-    pagination.innerHTML = ''; // Limpiar los botones de paginación
-
-    // Botón de 'anterior'
-    const prevButton = document.createElement('a');
-    prevButton.href = '#';
-    prevButton.classList.add('prev');
-    prevButton.textContent = '← Previous';
-    prevButton.onclick = () => cambiarPagina(paginaActual - 1);
-    pagination.appendChild(prevButton);
-
-    // Botones de páginas
-    for (let i = 1; i <= totalPaginas; i++) {
-        const pageButton = document.createElement('a');
-        pageButton.href = '#';
-        pageButton.textContent = i;
-        pageButton.classList.toggle('active', i === paginaActual);
-        pageButton.onclick = () => cambiarPagina(i);
-        pagination.appendChild(pageButton);
-    }
-
-    // Botón de 'siguiente'
-    const nextButton = document.createElement('a');
-    nextButton.href = '#';
-    nextButton.classList.add('next');
-    nextButton.textContent = 'Next →';
-    nextButton.onclick = () => cambiarPagina(paginaActual + 1);
-    pagination.appendChild(nextButton);
-}
-
-// Función para cambiar la página
-function cambiarPagina(pagina) {
-    const totalPaginas = Math.ceil(productosGlobales.length / productosPorPagina);
-    if (pagina < 1) pagina = 1;
-    if (pagina > totalPaginas) pagina = totalPaginas;
-
-    paginaActual = pagina;
-    mostrarProductos(productosGlobales, paginaActual);
-    actualizarPaginacion(productosGlobales.length);
-}
-
-
-document.addEventListener('DOMContentLoaded', cargarProductos);
-
-
-document.querySelectorAll('.filtros input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-
-        console.log('Filtro cambiado:', this.parentElement.textContent.trim());
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    cargarProductos(); // O cualquier función que inicialice el carrito o productos
 });
+
