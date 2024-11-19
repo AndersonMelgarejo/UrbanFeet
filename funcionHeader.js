@@ -7,7 +7,6 @@ function loadHeader() {
 
   // Crear el header
   const header = document.createElement('header');
-
   header.innerHTML = `
     <div class="content">
       <div class="menu container">
@@ -41,29 +40,32 @@ function loadHeader() {
       </div>
     </div>
   `;
-
   document.body.prepend(header);
 
   // Lógica de interacción
   const menuIcono = document.getElementById('menu-icono');
   const navbar = document.querySelector('.navbar');
   const storedName = localStorage.getItem('name');
+
+  // Mostrar mensaje de bienvenida si el nombre está almacenado
   if (storedName) {
-      document.getElementById('welcomeMessage').textContent = `Hola ${storedName.toUpperCase()}`;
-      document.getElementById('welcomeMessage').style.display = 'inline';
-      document.getElementById('loginButton').style.display = 'none';
+    document.getElementById('welcomeMessage').textContent = `Hola ${storedName.toUpperCase()}`;
+    document.getElementById('welcomeMessage').style.display = 'inline';
+    document.getElementById('loginButton').style.display = 'none';
   } else {
-      document.getElementById('loginButton').style.display = 'inline';
-      document.getElementById('welcomeMessage').style.display = 'none';
+    document.getElementById('loginButton').style.display = 'inline';
+    document.getElementById('welcomeMessage').style.display = 'none';
   }
 
+  // Toggle de menú en pantallas pequeñas
   menuIcono.addEventListener('click', () => {
-      navbar.classList.toggle('active');
+    navbar.classList.toggle('active');
   });
 
+  // Verificar si el usuario está logueado
   const isLoggedIn = localStorage.getItem("loggedIn");
   if (isLoggedIn) {
-      document.getElementById("loginButton").style.display = "none";
-      document.getElementById("welcomeMessage").style.display = "inline";
+    document.getElementById("loginButton").style.display = "none";
+    document.getElementById("welcomeMessage").style.display = "inline";
   }
 }
