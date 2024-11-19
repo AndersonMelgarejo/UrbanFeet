@@ -1,5 +1,5 @@
 let paginaActual = 1;
-const productosPorPagina = 15;
+const productosPorPagina = 12;
 let productosGlobales = [];
 
 // Función para cargar los productos desde el JSON
@@ -47,6 +47,7 @@ function crearProductoHTML(producto) {
             <p class="descripcion">${producto.descripcion}</p>
             <span class="marca">${producto.marca}</span>
             <span class="precio">S/ ${producto.precio.toFixed(2)}</span>
+            <!-- Moved the button below the price -->
             <button class="agregar-carrito" data-id="${producto.id}" onclick="agregarAlCarrito(${producto.id})">Añadir al carrito</button>
         </div>
     `;
@@ -75,7 +76,10 @@ function actualizarPaginacion(totalProductos) {
     prevButton.href = '#';
     prevButton.classList.add('prev');
     prevButton.textContent = '← Previous';
-    prevButton.onclick = () => cambiarPagina(paginaActual - 1);
+    prevButton.onclick = (e) => {
+        e.preventDefault();
+        cambiarPagina(paginaActual - 1);
+    };
     pagination.appendChild(prevButton);
 
     // Botones de páginas
@@ -84,7 +88,10 @@ function actualizarPaginacion(totalProductos) {
         pageButton.href = '#';
         pageButton.textContent = i;
         pageButton.classList.toggle('active', i === paginaActual);
-        pageButton.onclick = () => cambiarPagina(i);
+        pageButton.onclick = (e) => {
+            e.preventDefault();
+            cambiarPagina(i);
+        };
         pagination.appendChild(pageButton);
     }
 
@@ -93,7 +100,10 @@ function actualizarPaginacion(totalProductos) {
     nextButton.href = '#';
     nextButton.classList.add('next');
     nextButton.textContent = 'Next →';
-    nextButton.onclick = () => cambiarPagina(paginaActual + 1);
+    nextButton.onclick = (e) => {
+        e.preventDefault();
+        cambiarPagina(paginaActual + 1);
+    };
     pagination.appendChild(nextButton);
 }
 
@@ -106,7 +116,13 @@ function cambiarPagina(pagina) {
     paginaActual = pagina;
     mostrarProductos(productosGlobales, paginaActual);
     actualizarPaginacion(productosGlobales.length);
+
+    // Desplazar el contenedor de productos hacia la parte superior
+    const productosGrid = document.querySelector('.productos-grid');
+    productosGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+
 
 
 document.addEventListener('DOMContentLoaded', cargarProductos);

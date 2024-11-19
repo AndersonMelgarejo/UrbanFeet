@@ -1,15 +1,15 @@
 .catalogo-section {
-    display: flex; /* Usar Flexbox para la disposición de filtros y productos */
+    display: flex;
     padding: 2rem 0;
     background-color: #ececec;
 }
 
 .filtros {
-    width: 250px; /* Mantener el ancho fijo de los filtros */
+    width: 250px;
     padding: 1rem;
     background-color: #fafafa;
-    border-radius: 10px; 
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .filtro-grupo {
@@ -26,14 +26,14 @@
 
 .filtro-grupo select,
 .filtro-grupo .botones {
-    width: 100%; 
+    width: 100%;
     padding: 0.5rem;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 
 .productos-grid {
-    flex: 1; /* Ocupa el espacio restante */
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.5rem;
@@ -46,7 +46,10 @@
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .producto-item:hover {
@@ -55,22 +58,38 @@
 
 .producto-image {
     height: auto;
-    max-height: 250px; 
+    max-height: 250px;
     width: 100%;
     background-color: #ddd;
     margin-bottom: 1rem;
     border-radius: 8px;
 }
 
-/* Resto de tu CSS sin cambios */
+.producto-item .agregar-carrito {
+    background-color: #66b3ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.producto-item .agregar-carrito:hover {
+    background-color: #4fa3e1;
+}
+
 .marcas-section h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 30px;
     padding-bottom: 20px;
     padding-left: 30px;
     font-size: 2rem;
-    font-weight: bold;    
+    font-weight: bold;
 }
+
 .carr {
     width: 75vw;
     height: auto;
@@ -93,16 +112,16 @@
 
 .carr .slide {
     display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
-    align-items: center; /* Centra la imagen verticalmente */
-    width: 250px;  /* Ancho fijo para cada div */
-    height: 420px; /* Altura fija para cada div */    
-    background-color: #ececec;    
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 420px;
+    background-color: #ececec;
 }
 
 .carr .slide img {
-    width: 100%;  /* La imagen ocupa todo el div */
-    height: 100%; /* La imagen ocupa todo el div */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -118,21 +137,15 @@
     }
 }
 
-
-
-/* Media Queries para pantallas más pequeñas */
 @media (max-width: 480px) {
     .carr .slide {
-        width: 150px;  /* Ancho fijo para cada div */
-        height: 220px; /* Altura fija para cada div */            
+        width: 150px;
+        height: 220px;
     }
-    .carr .slide-track {        
-        gap: 35px;        
+    .carr .slide-track {
+        gap: 35px;
     }
 }
-
-
-
 
 .novedades-section {
     padding: 2rem 0;
@@ -142,7 +155,7 @@
 .novedades-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem; 
+    gap: 1.5rem;
 }
 
 .novedad-item {
@@ -169,25 +182,7 @@
     border-radius: 5px;
 }
 
-@keyframes slider {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scaleDown {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0.9);
-    }
-}
-
-.subtitulo3{
+.subtitulo3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 30px;
     padding-left: 30px;
@@ -197,7 +192,7 @@
 }
 
 .novedades-destacados {
-    padding: 20px;    
+    padding: 20px;
 }
 
 .novedades-destacados h2 {
@@ -205,18 +200,62 @@
     padding-top: 30px;
     padding-left: 10px;
     font-size: 2rem;
-    font-weight: bold;    
+    font-weight: bold;
     padding: 20px;
 }
 
 .productos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
 }
 
 .producto-item {
-    animation: scaleDown 0.3s ease-in-out; /* Aplicando la animación */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px;
+    max-width: 100%;
+}
+
+.producto-image {
+    height: 220px;
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.productos-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.producto-item .agregar-carrito {
+    background-color: #66b3ff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    align-self: center;
+}
+
+.producto-item .agregar-carrito:hover {
+    background-color: #4fa3e1;
 }
 
 .producto-card {
@@ -225,17 +264,17 @@
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-}
-
-.producto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .producto-card img {
     width: 100%;
-    height: auto;
-    border-radius: 4px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .producto-card h3 {
@@ -255,14 +294,27 @@
     color: #000;
 }
 
-/* Media Queries para ocultar los filtros en pantallas pequeñas */
+.producto-card .agregar-carrito {
+    background-color: #66b3ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.producto-card .agregar-carrito:hover {
+    background-color: #4fa3e1;
+}
+
 @media (max-width: 870px) {
     .filtros {
-        display: none; /* Oculta la sección de filtros */
+        display: none;
     }
 }
 
-/* Ajustes para la grilla de productos en pantallas más pequeñas */
 @media (max-width: 768px) {
     .productos-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -271,88 +323,43 @@
 
 @media (max-width: 480px) {
     .productos-grid {
-        grid-template-columns: 1fr; /* Un solo elemento por fila */
+        grid-template-columns: 1fr;
     }
 }
+
 .caja-paginacion {
     width: 100%;
     height: 100px;
     background-color: #f0f0f0;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .pagination {
-    width: 100%; /* Cambiar a 100% para adaptarse mejor */
-    max-width: 800px; /* Máxima anchura para mantener la alineación en pantallas grandes */
+    width: 100%;
+    max-width: 800px;
     display: flex;
-    align-items: center;
-    background-color: #f8f9fa;
-    border-radius: 20px;
-    padding: 5px 10px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    margin: auto;
-    overflow: hidden; /* Evitar que los elementos se salgan de la caja */
-    white-space: nowrap; /* Evitar que los elementos se envuelvan */
-    justify-content: space-between; /* Espaciado entre elementos */
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
 }
 
-.pagination a, .pagination span {
-    color: #333;
+.pagination li {
+    display: inline-block;
+}
+
+.pagination a {
     text-decoration: none;
-    padding: 6px 10px;
-    margin: 0 2px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    flex-shrink: 0; /* Evitar que los enlaces se reduzcan */
+    padding: 10px 20px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .pagination a:hover {
-    background-color: #e9ecef;
-}
-
-.pagination .active {
-    background-color: #007bff;
+    background-color: #66b3ff;
     color: white;
-}
-
-.pagination .ellipsis {
-    color: #6c757d;
-}
-
-.pagination .prev, .pagination .next {
-    font-weight: normal;
-}
-
-.pagination .prev {
-    margin-right: 5px;
-}
-
-.pagination .next {
-    margin-left: 5px;
-}
-
-/* Media Queries para hacer la paginación responsive */
-@media (max-width: 600px) {
-    .pagination {
-        flex-wrap: nowrap; /* Mantener elementos en una sola línea */
-        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
-    }
-
-    .pagination a, .pagination span {
-        padding: 4px 6px; /* Reducir el tamaño de los botones */
-        margin: 0 1px; /* Reducir margen para que quepan más elementos */
-    }
-
-    .pagination .ellipsis {
-        display: none; /* Ocultar los puntos suspensivos en pantallas pequeñas */
-    }
-}
-
-@media (max-width: 400px) {
-    .pagination a:nth-child(n+8) {
-        display: none; /* Ocultar números a partir de cierto punto */
-    }
 }
