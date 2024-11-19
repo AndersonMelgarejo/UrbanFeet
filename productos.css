@@ -1,7 +1,7 @@
 .catalogo-section {
     display: flex; /* Usar Flexbox para la disposición de filtros y productos */
     padding: 2rem 0;
-    background-color: #f2f2f2;
+    background-color: #ececec;
 }
 
 .filtros {
@@ -62,76 +62,72 @@
     border-radius: 8px;
 }
 
-
-
-.marcas-h2{
+/* Resto de tu CSS sin cambios */
+.marcas-section h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 30px;
-    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
     font-size: 2rem;
-    font-weight: bold;
-    background-color: #ececec;
+    font-weight: bold;    
 }
-.marcas-section {
-    padding: 2rem 0;
-    background-color: #ececec;
-    overflow: hidden; 
-}
-
-.marcas-carousel {
+.carr {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
     display: flex;
+    transition: transform 0.5s ease;
     width: 100%;
-    animation: slider 20s linear infinite;
 }
 
-.marcas-wrapper {
+.carr .slide-track {
     display: flex;
-    min-width: 100%;
-    height: auto;
-}
-
-.marca-item {
-    width: clamp(15%, 20%, 25%);
-    height: auto;
-    max-height: 230px;
-    background-color: #fff;
-    margin: 0 0.5rem; 
-    display: flex;
-    align-items: center;
+    animation: scroll 25s linear infinite;
+    -webkit-animation: scroll 25s linear infinite;
+    width: calc(200px * 14);
+    gap: 110px;
     justify-content: center;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    opacity: 1; 
-    transition: opacity 0.5s; 
+    background-color: #ececec;
 }
 
-.marca-item.hidden {
-    opacity: 0; 
+.carr .slide {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    width: 250px;  /* Ancho fijo para cada div */
+    height: 420px; /* Altura fija para cada div */    
+    background-color: #ececec;    
 }
 
+.carr .slide img {
+    width: 100%;  /* La imagen ocupa todo el div */
+    height: 100%; /* La imagen ocupa todo el div */
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-
-@keyframes slider {
+@keyframes scroll {
     0% {
+        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Cambia para que se desplace completamente */
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
     }
 }
+
+
 
 /* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .marca-item {
-        width: 30%; /* Cambia el ancho para adaptarse mejor */
-    }
-}
-
 @media (max-width: 480px) {
-    .marca-item {
-        width: 40%; /* Cambia el ancho para adaptarse mejor */
+    .carr .slide {
+        width: 150px;  /* Ancho fijo para cada div */
+        height: 220px; /* Altura fija para cada div */            
+    }
+    .carr .slide-track {        
+        gap: 35px;        
     }
 }
 
@@ -197,12 +193,11 @@
     padding-left: 30px;
     font-size: 2rem;
     font-weight: bold;
-    background-color: #f0f0f0;
+    background-color: #ececec;
 }
 
 .novedades-destacados {
-    padding: 20px;
-    background-color: #f0f0f0;
+    padding: 20px;    
 }
 
 .novedades-destacados h2 {
@@ -210,8 +205,8 @@
     padding-top: 30px;
     padding-left: 10px;
     font-size: 2rem;
-    font-weight: bold;
-    background-color: #ececec;
+    font-weight: bold;    
+    padding: 20px;
 }
 
 .productos-grid {
@@ -339,25 +334,25 @@
     margin-left: 5px;
 }
 
-
+/* Media Queries para hacer la paginación responsive */
 @media (max-width: 600px) {
     .pagination {
-        flex-wrap: nowrap; 
-        overflow-x: auto;
+        flex-wrap: nowrap; /* Mantener elementos en una sola línea */
+        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
     }
 
     .pagination a, .pagination span {
-        padding: 4px 6px;
-        margin: 0 1px; 
+        padding: 4px 6px; /* Reducir el tamaño de los botones */
+        margin: 0 1px; /* Reducir margen para que quepan más elementos */
     }
 
     .pagination .ellipsis {
-        display: none; 
+        display: none; /* Ocultar los puntos suspensivos en pantallas pequeñas */
     }
 }
 
 @media (max-width: 400px) {
     .pagination a:nth-child(n+8) {
-        display: none; 
+        display: none; /* Ocultar números a partir de cierto punto */
     }
 }
