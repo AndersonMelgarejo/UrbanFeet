@@ -62,7 +62,7 @@
     border-radius: 8px;
 }
 
-/* Resto de tu CSS sin cambios */
+
 
 .marcas-h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -75,7 +75,7 @@
 .marcas-section {
     padding: 2rem 0;
     background-color: #ececec;
-    overflow: hidden; /* Oculta las marcas que no caben */
+    overflow: hidden; 
 }
 
 .marcas-carousel {
@@ -91,11 +91,11 @@
 }
 
 .marca-item {
-    width: 20%; /* Ajusta el ancho para que haya espacio */
+    width: clamp(15%, 20%, 25%);
     height: auto;
     max-height: 230px;
     background-color: #fff;
-    margin: 0 0.5rem; /* Espaciado entre las marcas */
+    margin: 0 0.5rem; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,12 +103,12 @@
     transition: transform 0.3s ease-in-out;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    opacity: 1; /* Comienza visible */
-    transition: opacity 0.5s; /* Transición para la opacidad */
+    opacity: 1; 
+    transition: opacity 0.5s; 
 }
 
 .marca-item.hidden {
-    opacity: 0; /* Cuando se oculta, establece la opacidad en 0 */
+    opacity: 0; 
 }
 
 
@@ -339,25 +339,25 @@
     margin-left: 5px;
 }
 
-/* Media Queries para hacer la paginación responsive */
+
 @media (max-width: 600px) {
     .pagination {
-        flex-wrap: nowrap; /* Mantener elementos en una sola línea */
-        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+        flex-wrap: nowrap; 
+        overflow-x: auto;
     }
 
     .pagination a, .pagination span {
-        padding: 4px 6px; /* Reducir el tamaño de los botones */
-        margin: 0 1px; /* Reducir margen para que quepan más elementos */
+        padding: 4px 6px;
+        margin: 0 1px; 
     }
 
     .pagination .ellipsis {
-        display: none; /* Ocultar los puntos suspensivos en pantallas pequeñas */
+        display: none; 
     }
 }
 
 @media (max-width: 400px) {
     .pagination a:nth-child(n+8) {
-        display: none; /* Ocultar números a partir de cierto punto */
+        display: none; 
     }
 }
