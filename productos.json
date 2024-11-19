@@ -224,7 +224,7 @@
             "id": 21,
             "nombre": "Zapatillas Deportivas 23067-M4",
             "precio": 160.00,
-            "imagen": "imagenes y videos/Zapatillas Deportivas 23067-M4.png",
+            "imagen": "imagenes y videos/Zapatillas Outdoor Para Mujer I-Run Kilimanjaro 058F8 - Irun.png",
             "descripcion": "Zapatillas deportivas",
             "marca": "Punto Original",
             "categoria": "Deportivo",
@@ -235,7 +235,7 @@
             "id": 22,
             "nombre": "Zapatillas Urbanas 23085-F2",
             "precio": 649.00,
-            "imagen": "imagenes y videos/Zapatillas Urbanas 23085-F2.png",
+            "imagen": "imagenes y videos/Zapatillas Training para Mujer I-RUN FOREST 7341F6 - Irun.png",
             "descripcion": "Zapatillas deportivas",
             "marca": "Punto Original",
             "categoria": "Deportivo",
@@ -246,7 +246,7 @@
             "id": 23,
             "nombre": "Zapatillas Deportivas 23067-M1",
             "precio": 160.00,
-            "imagen": "imagenes y videos/Zapatillas Deportivas 23067-M1.png",
+            "imagen": "imagenes y videos/Zapatillas Training para Hombre I-RUN ANY 7216M4 .png",
             "descripcion": "Zapatillas deportivas",
             "marca": "Punto Original",
             "categoria": "Deportivo",
@@ -254,6 +254,7 @@
             "colores": ["Blanco"]
         },
         {
+
             "id": 20,
             "nombre": "Zapatillas Deportivas 22608-F4",
             "precio": 160.00,
@@ -271,8 +272,50 @@
             "imagen": "imagenes y videos/Zapatillas Atletix Running Light 45K.png",
             "descripcion": "I-RUN NIEVES COLORES",
             "marca": "I-RUN",
+
+            "id": 24,
+            "nombre": "Nike Air Zoom Pegasus 39",
+            "precio": 259.90,
+            "imagen": "imagenes y videos/nike_pegasus39.png",
+            "descripcion": "Zapatillas de running versátiles y ligeras",
+            "marca": "NIKE",
+            "categoria": "Running",
+            "genero": "Unisex",
+            "colores": ["Negro", "Gris"]
+          },
+          {
+            "id": 25,
+            "nombre": "Nike Court Vision Low",
+            "precio": 199.90,
+            "imagen": "imagenes y videos/nike_courtvision.png",
+            "descripcion": "Zapatillas de estilo retro para el día a día",
+            "marca": "NIKE",
+
             "categoria": "Casual",
+            "genero": "Unisex",
+            "colores": ["Blanco", "Negro"]
+          },
+          {
+            "id": 26,
+            "nombre": "Nike Free Metcon 4",
+            "precio": 289.90,
+            "imagen": "imagenes y videos/nike_metcon4.png",
+            "descripcion": "Zapatillas de entrenamiento flexibles y resistentes",
+            "marca": "NIKE",
+            "categoria": "Entrenamiento",
+            "genero": "Hombre",
+            "colores": ["Azul", "Negro"]
+          },
+          {
+            "id": 27,
+            "nombre": "Nike Renew Ride 3",
+            "precio": 229.90,
+            "imagen": "imagenes y videos/nike_renewride3.png",
+            "descripcion": "Zapatillas para correr con máxima amortiguación",
+            "marca": "NIKE",
+            "categoria": "Running",
             "genero": "Mujer",
+
             "colores": ["Multicolor"]
         },
         {
@@ -293,10 +336,131 @@
             "imagen": "imagenes y videos/Zapatillas Deportivas 23067-M4.png",
             "descripcion": "I-RUN NIEVES COLORES",
             "marca": "I-RUN",
+
+            "colores": ["Rosa", "Blanco"]
+          },
+          {
+            "id": 28,
+            "nombre": "Nike React Infinity Run Flyknit",
+            "precio": 349.90,
+            "imagen": "imagenes y videos/nike_reactflyknit.png",
+            "descripcion": "Zapatillas diseñadas para evitar lesiones al correr",
+            "marca": "NIKE",
+            "categoria": "Running",
+            "genero": "Unisex",
+            "colores": ["Verde", "Gris"]
+          },
+          {
+            "id": 29,
+            "nombre": "Adidas Adizero Boston 11",
+            "precio": 329.90,
+            "imagen": "imagenes y videos/adidas_boston11.png",
+            "descripcion": "Zapatillas para carreras de larga distancia",
+            "marca": "ADIDAS",
+            "categoria": "Running",
+            "genero": "Unisex",
+            "colores": ["Rojo", "Blanco"]
+          },
+          {
+            "id": 30,
+            "nombre": "Adidas Stan Smith",
+            "precio": 249.90,
+            "imagen": "imagenes y videos/adidas_stansmith.png",
+            "descripcion": "Zapatillas clásicas y sostenibles",
+            "marca": "ADIDAS",
+            "categoria": "Casual",
+            "genero": "Unisex",
+            "colores": ["Blanco", "Verde"]
+          },
+          {
+            "id": 31,
+            "nombre": "Adidas Ultraboost Light",
+            "precio": 359.90,
+            "imagen": "imagenes y videos/adidas_ultraboostlight.png",
+            "descripcion": "Zapatillas con la mejor tecnología de amortiguación",
+            "marca": "ADIDAS",
+            "categoria": "Running",
+            "genero": "Hombre",
+            "colores": ["Negro", "Naranja"]
+          },
+          {
+            "id": 32,
+            "nombre": "Adidas Superstar",
+            "precio": 219.90,
+            "imagen": "imagenes y videos/adidas_superstar.png",
+            "descripcion": "Zapatillas icónicas para el estilo urbano",
+            "marca": "ADIDAS",
+            "categoria": "Casual",
+            "genero": "Unisex",
+            "colores": ["Blanco", "Negro"]
+          },
+          {
+            "id": 33,
+            "nombre": "Adidas NMD R1",
+            "precio": 279.90,
+            "imagen": "imagenes y videos/adidas_nmdr1.png",
+            "descripcion": "Zapatillas urbanas con estilo moderno",
+            "marca": "ADIDAS",
+            "categoria": "Casual",
+            "genero": "Unisex",
+            "colores": ["Gris", "Azul"]
+          },
+          {
+            "id": 34,
+            "nombre": "Puma Future Rider Play On",
+            "precio": 199.90,
+            "imagen": "imagenes y videos/puma_futurerider.png",
+            "descripcion": "Zapatillas retro para uso casual",
+            "marca": "PUMA",
+            "categoria": "Casual",
+            "genero": "Unisex",
+            "colores": ["Rojo", "Amarillo"]
+          },
+          {
+            "id": 35,
+            "nombre": "Puma RS-X Reinvention",
+            "precio": 239.90,
+            "imagen": "imagenes y videos/puma_rsx.png",
+            "descripcion": "Zapatillas de estilo innovador y moderno",
+            "marca": "PUMA",
             "categoria": "Casual",
             "genero": "Hombre",
-            "colores": ["Negro"]
-        }
+            "colores": ["Negro", "Blanco"]
+          },
+          {
+            "id": 36,
+            "nombre": "Puma Deviate Nitro",
+            "precio": 349.90,
+            "imagen": "imagenes y videos/puma_deviate.png",
+            "descripcion": "Zapatillas para correr largas distancias",
+            "marca": "PUMA",
+            "categoria": "Running",
+            "genero": "Unisex",
+            "colores": ["Naranja", "Gris"]
+          },
+          {
+            "id": 37,
+            "nombre": "Puma Tazon 6 FM",
+            "precio": 179.90,
+            "imagen": "imagenes y videos/puma_tazon6.png",
+            "descripcion": "Zapatillas para entrenamientos de alto rendimiento",
+            "marca": "PUMA",
+            "categoria": "Entrenamiento",
+            "genero": "Hombre",
+            "colores": ["Blanco", "Negro"]
+          },
+          {
+            "id": 38,
+            "nombre": "Puma Cell Surin 2",
+            "precio": 209.90,
+            "imagen": "imagenes y videos/puma_cellsurin.png",
+            "descripcion": "Zapatillas cómodas para actividades diarias",
+            "marca": "PUMA",
+            "categoria": "Casual",
+            "genero": "Unisex",
+            "colores": ["Negro", "Rojo"]
+          }
+        
         
     ]
 }

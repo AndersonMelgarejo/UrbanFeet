@@ -35,7 +35,7 @@ function mostrarProductos(productos, pagina) {
 
 function crearProductoHTML(producto) {
     return `
-        <div class="producto-item" data-id="${producto.id}">
+        <div data-aos="zoom-in-down" class="producto-item" data-id="${producto.id}">
             <img class="producto-image" 
                  src="${producto.imagen}" 
                  alt="${producto.nombre}" 
