@@ -35,6 +35,7 @@ function mostrarProductos(productos, pagina) {
 }
 
 // Función para crear el HTML de cada producto
+
 function crearProductoHTML(producto) {
     return `
         <div class="producto-item" data-id="${producto.id}">
@@ -46,9 +47,11 @@ function crearProductoHTML(producto) {
             <p class="descripcion">${producto.descripcion}</p>
             <span class="marca">${producto.marca}</span>
             <span class="precio">S/ ${producto.precio.toFixed(2)}</span>
+            <button class="agregar-carrito" data-id="${producto.id}" onclick="agregarAlCarrito(${producto.id})">Añadir al carrito</button>
         </div>
     `;
 }
+
 
 // Función para mostrar un mensaje de error
 function mostrarError() {
@@ -115,3 +118,5 @@ document.querySelectorAll('.filtros input[type="checkbox"]').forEach(checkbox =>
         console.log('Filtro cambiado:', this.parentElement.textContent.trim());
     });
 });
+
+

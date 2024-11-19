@@ -42,7 +42,261 @@
             "marca": "I-RUN",
             "categoria": "Deportivo",
             "genero": "Unisex",
+            "colores": ["Blanco"]                
+        },
+        {
+            "id": 5,
+            "nombre": "Air Jordan 11 Retro",
+            "precio": 999.90,
+            "imagen": "imagenes y videos/rojo.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "NIKE",
+            "categoria": "Deportivo",
+            "genero": "Unisex",
+            "colores": ["Negro"]
+        },
+        {
+            "id": 6,
+            "nombre": "Air Jordan 1 Low Method of Make",
+            "precio": 699.90,
+            "imagen": "imagenes y videos/Air Jordan 1 Low Method of Make.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "NIKE",
+            "categoria": "Deportivo",
+            "genero": "Mujer",
+            "colores": ["Negro"]
+        },
+        {
+            "id": 7,
+            "nombre": "Nike Air Pegasus 2005",
+            "precio": 699.90,
+            "imagen": "imagenes y videos/Nike Air Pegasus 2005.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "NIKE",
+            "categoria": "Deportivo",
+            "genero": "Mujer",
             "colores": ["Blanco"]
-        }        
+        },
+        {
+            "id": 8,
+            "nombre": "Nike Air Force 1 '07",
+            "precio": 579.90,
+            "imagen": "imagenes y videos/Nike Air Force 1 '07.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "NIKE",
+            "categoria": "Deportivo",
+            "genero": "Mujer",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 9,
+            "nombre": "Nike Cortez",
+            "precio": 279.93,
+            "imagen": "imagenes y videos/Nike Cortez.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "NIKE",
+            "categoria": "Deportivo",
+            "genero": "Hombre",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 10,
+            "nombre": "Zapatillas Atletix Lifestyle Wind56",
+            "precio": 119.00,
+            "imagen": "imagenes y videos/Zapatillas Atletix Lifestyle Wind56.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "athletic",
+            "categoria": "Deportivo",
+            "genero": "Niño",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 11,
+            "nombre": "Zapatillas Atletix Lifestyle Kids Spideknit49",
+            "precio": 54.50,
+            "imagen": "imagenes y videos/Zapatillas Atletix Lifestyle Kids Spideknit49.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "athletic",
+            "categoria": "Deportivo",
+            "genero": "Niña",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 12,
+            "nombre": "Zapatillas Atletix Running Light 45K",
+            "precio": 66.90,
+            "imagen": "imagenes y videos/Zapatillas Atletix Running Light 45K.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "athletic",
+            "categoria": "Deportivo",
+            "genero": "Hombre",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 13,
+            "nombre": "Zapatillas New Athletic Tennis Forrest22",
+            "precio": 206.10,
+            "imagen": "imagenes y videos/Zapatillas New Athletic Tennis Forrest22.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "athletic",
+            "categoria": "Deportivo",
+            "genero": "Hombre",
+            "colores": ["Negro"]
+        },
+        {
+            "id": 14,
+            "nombre": "Zapatillas New Athletic Tennis Forrest10",
+            "precio": 206.10,
+            "imagen": "imagenes y videos/Zapatillas New Athletic Tennis Forrest10.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "athletic",
+            "categoria": "Deportivo",
+            "genero": "Mujer",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 15,
+            "nombre": "Zapatillas SL72 Bob Marley",
+            "precio": 449.00,
+            "imagen": "imagenes y videos/Zapatillas SL72 Bob Marley.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Adidas",
+            "categoria": "Deportivo",
+            "genero": "Hombre",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 16,
+            "nombre": "Zapatillas Jabbar Hi",
+            "precio": 206.10,
+            "imagen": "imagenes y videos/Zapatillas Jabbar Hi.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Adidas",
+            "categoria": "Deportivo",
+            "genero": "Unisex",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 17,
+            "nombre": "Zapatillas Jabbar Low",
+            "precio": 379.00,
+            "imagen": "imagenes y videos/Zapatillas Jabbar Low.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Adidas",
+            "categoria": "Deportivo",
+            "genero": "Unisex",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 18,
+            "nombre": "Zapatillas de Básquet Anthony Edwards 1 Mid",
+            "precio": 459.00,
+            "imagen": "imagenes y videos/Zapatillas de Básquet Anthony Edwards 1 Mid.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Adidas",
+            "categoria": "Deportivo",
+            "genero": "Unisex",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 19,
+            "nombre": "Zapatillas Mad IIInfinity",
+            "precio": 649.00,
+            "imagen": "imagenes y videos/Zapatillas Mad IIInfinity.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Adidas",
+            "categoria": "Deportivo",
+            "genero": "Unisex",
+            "colores": ["Negro"]
+        },
+        {
+            "id": 20,
+            "nombre": "Zapatillas Deportivas 23065-M2",
+            "precio": 160.00,
+            "imagen": "imagenes y videos/Zapatillas Deportivas 23065-M2.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Punto Original",
+            "categoria": "Deportivo",
+            "genero": "Hombre",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 21,
+            "nombre": "Zapatillas Deportivas 23067-M4",
+            "precio": 160.00,
+            "imagen": "imagenes y videos/Zapatillas Deportivas 23067-M4.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Punto Original",
+            "categoria": "Deportivo",
+            "genero": "Hombre",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 22,
+            "nombre": "Zapatillas Urbanas 23085-F2",
+            "precio": 649.00,
+            "imagen": "imagenes y videos/Zapatillas Urbanas 23085-F2.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Punto Original",
+            "categoria": "Deportivo",
+            "genero": "Mujer",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 23,
+            "nombre": "Zapatillas Deportivas 23067-M1",
+            "precio": 160.00,
+            "imagen": "imagenes y videos/Zapatillas Deportivas 23067-M1.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Punto Original",
+            "categoria": "Deportivo",
+            "genero": "Hombre",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 20,
+            "nombre": "Zapatillas Deportivas 22608-F4",
+            "precio": 160.00,
+            "imagen": "imagenes y videos/Zapatillas Deportivas 22608-F4.png",
+            "descripcion": "Zapatillas deportivas",
+            "marca": "Punto Original",
+            "categoria": "Deportivo",
+            "genero": "Mujer",
+            "colores": ["Blanco"]
+        },
+        {
+            "id": 21,
+            "nombre": "Zapatillas Kilimanjaro 058F8",
+            "precio": 127.20,
+            "imagen": "imagenes y videos/Zapatillas Kilimanjaro 058F8.png",
+            "descripcion": "I-RUN NIEVES COLORES",
+            "marca": "I-RUN",
+            "categoria": "Casual",
+            "genero": "Mujer",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 22,
+            "nombre": "Zapatillas FOREST 7341F6",
+            "precio": 99.00,
+            "imagen": "imagenes y videos/Zapatillas FOREST 7341F6.png",
+            "descripcion": "I-RUN NIEVES COLORES",
+            "marca": "I-RUN",
+            "categoria": "Casual",
+            "genero": "Mujer",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 23,
+            "nombre": "Zapatillas 7216M4",
+            "precio": 159.00,
+            "imagen": "imagenes y videos/Zapatillas 7216M4.png",
+            "descripcion": "I-RUN NIEVES COLORES",
+            "marca": "I-RUN",
+            "categoria": "Casual",
+            "genero": "Hombre",
+            "colores": ["Negro"]
+        }
+        
     ]
 }
