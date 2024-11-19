@@ -110,7 +110,7 @@ header {
 .navbar {
     display: flex; /* Muestra el menú normal en pantallas grandes */
     padding: 10px 20px;
-    justify-content: space-between; /* Espacia los elementos */
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
     align-items: center;
 }
 
@@ -130,24 +130,31 @@ header {
     background-color: #555; /* Color de fondo más claro al pasar el cursor */
     border-color: #666; /* Borde más claro al pasar el cursor */
 }
+
 .navbar.active {
     display: flex; /* Muestra el menú cuando se activa */
     position: fixed; /* Fijo para que cubra toda la pantalla */
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0; /* Asegura que cubra toda la altura de la pantalla */
+    bottom: 0;
     background-color: black; /* Fondo oscuro sin opacidad */
-    flex-direction: column; /* Muestra los elementos en vertical */
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center; /* Centra horizontalmente el contenido */
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    justify-content: flex-start; /* Alinea el contenido desde el top */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    padding: 20px;
+    width: 250px;
+    z-index: 1000;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .navbar.active ul {
+    display: flex; /* Mostrar los elementos como flex */
     flex-direction: column; /* Asegura que los elementos de la lista sean verticales */
     list-style: none; /* Elimina el estilo de lista por defecto */
     padding: 0; /* Elimina padding */
     margin: 0; /* Elimina margin */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
 .navbar.active ul li {

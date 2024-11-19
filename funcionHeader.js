@@ -18,7 +18,7 @@ function loadHeader() {
           </div>
           <nav class="navbar">
             <ul>
-              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="productos.html">Inicio</a></li>
               <li><a href="Nosotros.html">Nosotros</a></li>
               <li><a href="Contactanos.html">Contacto</a></li>
               <li><a href="RedesSociales.html">Redes</a></li>
@@ -29,6 +29,7 @@ function loadHeader() {
             </a>
           </nav>
         </div>
+        <script src="script.js"></script>
       </div>
     `;
 
