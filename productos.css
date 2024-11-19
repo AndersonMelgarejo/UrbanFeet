@@ -97,13 +97,14 @@
     align-items: center; /* Centra la imagen verticalmente */
     width: 250px;  /* Ancho fijo para cada div */
     height: 420px; /* Altura fija para cada div */    
-    background-color: #ececec;
+    background-color: #ececec;    
 }
 
 .carr .slide img {
     width: 100%;  /* La imagen ocupa todo el div */
     height: 100%; /* La imagen ocupa todo el div */
     object-fit: cover;
+    border-radius: 10px;
 }
 
 @keyframes scroll {
@@ -120,15 +121,13 @@
 
 
 /* Media Queries para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .marca-item {
-        width: 30%; /* Cambia el ancho para adaptarse mejor */
-    }
-}
-
 @media (max-width: 480px) {
-    .marca-item {
-        width: 40%; /* Cambia el ancho para adaptarse mejor */
+    .carr .slide {
+        width: 150px;  /* Ancho fijo para cada div */
+        height: 220px; /* Altura fija para cada div */            
+    }
+    .carr .slide-track {        
+        gap: 35px;        
     }
 }
 
