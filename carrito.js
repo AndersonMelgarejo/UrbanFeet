@@ -24,7 +24,7 @@ function actualizarCarrito() {
 function crearProductoCarritoHTML(producto) {
     return `
         <div class="producto-carrito-item" data-id="${producto.id}">
-            <img class="producto-image" src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='imagenes y videos/placeholder.png'"/>
+            <img class="producto-image imag-tamaño-carrito" src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='imagenes y videos/placeholder.png'"/>
             <h3>${producto.nombre}</h3>
             <p class="descripcion">${producto.descripcion}</p>
             <span class="precio">S/ ${producto.precio.toFixed(2)}</span>
