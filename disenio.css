@@ -43,11 +43,10 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
+    display: flex;
+    flex-direction: column;    
+    background: black;
+    padding: auto 0;
 }
 
 .content {
@@ -230,4 +229,31 @@ video {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+.slider-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;             
+    justify-content: center;
+    align-items: center; 
+    background-color: #ececec;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: flex;
 }
