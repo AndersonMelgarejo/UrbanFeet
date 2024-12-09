@@ -241,6 +241,15 @@ justify-content: center;
     height: 90%;
 }
 
+.ajus{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 
 
 

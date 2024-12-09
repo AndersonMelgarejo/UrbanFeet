@@ -1,23 +1,28 @@
 .catalogo-section {
-    display: flex;
+    
     padding: 2rem 0;
     background-color: #ececec;
 }
 
 .filtros {
-    width: 250px;
-    padding: 1rem;
+    display: flex;    
     background-color: #fafafa;
     border-radius: 10px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 705px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .filtro-grupo {
-    margin-bottom: 2rem;
+    display: grid;
+    width: max-content;
+    padding-left: 20px;    
 }
 
-.filtro-grupo label {
-    display: block;
+.filtro-grupo label {    
     padding-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
@@ -25,8 +30,7 @@
 }
 
 .filtro-grupo select,
-.filtro-grupo .botones {
-    width: 100%;
+.filtro-grupo .botones {    
     padding: 0.5rem;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -38,6 +42,14 @@
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.5rem;
     padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;    
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .producto-item {
@@ -185,13 +197,16 @@
 .subtitulo3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 30px;
-    padding-left: 30px;
+    padding-left: 10px;
     font-size: 2rem;
     font-weight: bold;
-    background-color: #ececec;
+    padding: 20px;
 }
 
 .novedades-destacados {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
@@ -202,13 +217,6 @@
     font-size: 2rem;
     font-weight: bold;
     padding: 20px;
-}
-
-.productos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
 }
 
 .producto-item {
@@ -231,14 +239,6 @@
     background-color: #ddd;
     margin-bottom: 1rem;
     border-radius: 8px;
-}
-
-.productos-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
 }
 
 .producto-item .agregar-carrito {

@@ -1,5 +1,5 @@
 let paginaActual = 1;
-const productosPorPagina = 12;
+const productosPorPagina = 15;
 let productosGlobales = [];
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
