@@ -3,6 +3,12 @@ const productosPorPagina = 15;
 let productosGlobales = [];
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+// Seleccionamos el slider de precio y el elemento que muestra el valor
+const precioSlider = document.getElementById('precioSlider');
+const precioValor = document.getElementById('precioValor');
+let precioAnterior = precioSlider.value; // Guardamos el valor inicial del slider
+
+// Función para cargar los productos
 async function cargarProductos() {
     try {
         const response = await fetch('productos.json');
@@ -19,6 +25,7 @@ async function cargarProductos() {
     }
 }
 
+// Función para mostrar los productos en la página
 function mostrarProductos(productos, pagina) {
     const productosGrid = document.querySelector('.productos-grid');
     productosGrid.innerHTML = ''; // Limpiar el contenedor
@@ -33,22 +40,26 @@ function mostrarProductos(productos, pagina) {
     });
 }
 
+// Función para crear HTML de cada producto
 function crearProductoHTML(producto) {
     return `
         <div data-aos="zoom-in-down" class="producto-item" data-id="${producto.id}">
             <img class="producto-image" 
-                 src="${producto.imagen}" 
-                 alt="${producto.nombre}" 
-                 onerror="this.src='imagenes y videos/placeholder.png'"/>
+                src="${producto.imagen}" 
+                alt="${producto.nombre}" 
+                onerror="this.src='imagenes y videos/placeholder.png'"/>
             <h3>${producto.nombre}</h3>
             <p class="descripcion">${producto.descripcion}</p>
             <span class="marca">${producto.marca}</span>
+            <span class="colores">${producto.colores.join(', ')}</span>
+            <span class="genero">${producto.genero}</span> <!-- Mostrar el género -->
             <span class="precio">S/ ${producto.precio.toFixed(2)}</span>
             <button class="agregar-carrito" data-id="${producto.id}" onclick="agregarAlCarrito(${producto.id})">Añadir al carrito</button>
         </div>
     `;
 }
 
+// Función para agregar al carrito
 function agregarAlCarrito(productId) {
     const producto = productosGlobales.find(p => p.id === productId);
     if (producto) {
@@ -64,6 +75,7 @@ function agregarAlCarrito(productId) {
     }
 }
 
+// Función para actualizar la paginación
 function actualizarPaginacion(totalProductos) {
     const totalPaginas = Math.ceil(totalProductos / productosPorPagina);
     const pagination = document.querySelector('.pagination');
@@ -102,6 +114,7 @@ function actualizarPaginacion(totalProductos) {
     pagination.appendChild(nextButton);
 }
 
+// Función para cambiar de página
 function cambiarPagina(pagina) {
     const totalPaginas = Math.ceil(productosGlobales.length / productosPorPagina);
     if (pagina < 1) pagina = 1;
@@ -115,6 +128,7 @@ function cambiarPagina(pagina) {
     productosGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// Función para mostrar error
 function mostrarError() {
     const productosGrid = document.querySelector('.productos-grid');
     productosGrid.innerHTML = `
@@ -125,7 +139,68 @@ function mostrarError() {
     `;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    cargarProductos(); // O cualquier función que inicialice el carrito o productos
+// Event listener para mostrar el valor del precio en tiempo real
+precioSlider.addEventListener('input', () => {
+    const nuevoPrecio = precioSlider.value;
+    precioValor.textContent = `S/ ${nuevoPrecio}`; // Actualiza el valor mostrado en tiempo real
 });
 
+// Event listener para actualizar los productos solo cuando el usuario termina de mover el slider
+precioSlider.addEventListener('change', () => {
+    const nuevoPrecio = precioSlider.value;
+    // Solo actualizamos los productos si el precio ha cambiado
+    if (nuevoPrecio !== precioAnterior) {
+        precioAnterior = nuevoPrecio; // Actualizamos el valor anterior
+        filtrarProductos(); // Filtramos los productos basados en el nuevo precio
+    }
+});
+
+// Función para filtrar productos por los filtros seleccionados
+function filtrarProductos() {
+    const precioMaximo = parseInt(precioSlider.value);
+
+    // Obtener marcas seleccionadas
+    const marcasSeleccionadas = obtenerSeleccion('marca');
+
+    // Obtener colores seleccionados
+    const coloresSeleccionados = obtenerSeleccion('color');
+
+    // Obtener géneros seleccionados
+    const generosSeleccionados = obtenerSeleccion('genero');
+
+    // Filtrar productos
+    const productosFiltrados = productosGlobales.filter(producto => {
+        const precioValido = producto.precio <= precioMaximo;
+        const marcaValida = marcasSeleccionadas.length === 0 || marcasSeleccionadas.includes(producto.marca);
+        const colorValido = coloresSeleccionados.length === 0 || coloresSeleccionados.some(color => producto.colores.includes(color));
+        const generoValido = generosSeleccionados.length === 0 || generosSeleccionados.includes(producto.genero);
+        
+        return precioValido && marcaValida && colorValido && generoValido;
+    });
+
+    mostrarProductos(productosFiltrados, paginaActual);
+    actualizarPaginacion(productosFiltrados.length);
+}
+
+// Función para obtener las opciones seleccionadas de los filtros (marca, color, género)
+function obtenerSeleccion(filtro) {
+    const checkboxes = document.querySelectorAll(`input[name="${filtro}"]:checked`);
+    return Array.from(checkboxes).map(checkbox => checkbox.value);
+}
+
+// Event listener para los filtros de marcas, colores y géneros
+const filtrosMarcas = document.querySelectorAll('input[name="marca"]');
+const filtrosColores = document.querySelectorAll('input[name="color"]');
+const filtrosGeneros = document.querySelectorAll('input[name="genero"]');
+filtrosMarcas.forEach(filtro => {
+    filtro.addEventListener('change', filtrarProductos);
+});
+filtrosColores.forEach(filtro => {
+    filtro.addEventListener('change', filtrarProductos);
+});
+filtrosGeneros.forEach(filtro => {
+    filtro.addEventListener('change', filtrarProductos);
+});
+
+// Cargar los productos al cargar la página
+cargarProductos();
