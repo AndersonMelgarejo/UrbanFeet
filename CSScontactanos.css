@@ -284,6 +284,45 @@ p{
     margin:0px;
 }
 
+.historial {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.registro {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.registro:last-child {
+  border-bottom: none;
+}
+
+.registro p {
+  margin: 5px 0;
+}
+
+.eliminar-historial {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.eliminar-historial:hover {
+  background-color: #c82333;
+}
+
 
 @media (min-width: 360px) and (max-width: 428px)  {
   .contenedor {

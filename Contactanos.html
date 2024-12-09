@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <script src="funcionHeader.js"></script>
   <script src="funcionFooter.js"></script>
+  <script src="ContactanosFunciones.js"></script>
 <title>Urban Feet</title>
 </head>
 <body style="background: #f2f2f2">
@@ -18,8 +19,8 @@
   loadHeader();
 </script>
     
-    <div> 
-  <div class="contact-info">
+  <div> 
+    <div class="contact-info">
       
       <div class="info-item">
         <h3>Teléfono</h3>
@@ -36,81 +37,75 @@
         <a href="https://www.google.com/intl/es-419/gmail/about/"><img class="multi_gmail" src="imagenes y videos/logo-Gmail-1.png" alt=""/></a>
         <p>urbanfeet@gmail.com</p>
       </div>
-  </div>
-        <div class="subtitu">
-            <div class="open-sans-text">
-                <p style="font-weight: bold;">¡Estamos Aquí Para Ayudarte!</p>
-            <p>¿Tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto con nosotros?</p>
-            <p>¡Nos encantaría saber de ti! En Urban Feet👟, valoramos cada mensaje</p>
-            <p>y nos comprometemos a responderte lo antes posible.</p>
-            </div>
-            <img  class="imghelp"src="imagenes y videos/help.png" alt=""/>
-            <img class="imghelp" src="imagenes y videos/help2.png" alt=""/>
+    </div>
+    <div class="subtitu">
+        <div class="open-sans-text">
+          <p style="font-weight: bold;">¡Estamos Aquí Para Ayudarte!</p>
+          <p>¿Tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto con nosotros?</p>
+          <p>¡Nos encantaría saber de ti! En Urban Feet👟, valoramos cada mensaje</p>
+          <p>y nos comprometemos a responderte lo antes posible.</p>
         </div>
-        <div class="contenedor" style="padding-bottom: 20px;">
-    <div class="botones">
-      <button onclick="mostrarContenido('contenido1')">Mensajes</button>
-      <button onclick="mostrarContenido('contenido2')">Sugerencias</button>
-      <button onclick="mostrarContenido('contenido3')">Libro de reclamaciones</button>
+          <img  class="imghelp"src="imagenes y videos/help.png" alt=""/>
+          <img class="imghelp" src="imagenes y videos/help2.png" alt=""/>
     </div>
-    <div id="contenido1" class="contenido">
-      <form action="#" class="contact-form">
-          <h3>Envíanos un Mensaje</h3>
-          <input type="text" name="nombre" placeholder="Nombre" required>
-          <input type="text" name="apellidos" placeholder="Apellidos" required>
-          <input type="email" name="email" placeholder="Correo electrónico" required>
-          <textarea style="padding-bottom: 100px;" name="mensaje" placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-    </div>
-    <div id="contenido2" class="contenido">
-      <form action="#" class="contact-form">
-          <h3>Sugerencias</h3>
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-          <input type="text" name="apellidos" placeholder="Apellidos" required>
-          <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-          <textarea style="padding-bottom: 100px;" id="sugerencia" name="sugerencia" placeholder="Escribe tu sugerencia" required></textarea>  
-          <button type="submit">Enviar</button>
-        </form>
-    </div>
-    <div id="contenido3" class="contenido">
-      <form action="#" class="contact-form">
-          <h3>Libro de Reclamaciones</h3>
-          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-          <input type="text" name="apellidos" placeholder="Apellidos" required>
-          <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
-          <input type="date" id="fechaInput">
-          <input type="text" id="dni" name="dni" placeholder="DNI/CE" required>
-          <input type="text" id="telefono" name="telefono" placeholder="Teléfono" required>
-          <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
-          <textarea style="padding-bottom: 100px;" name="mensaje" placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-      </form>
+    <div class="contenedor" style="padding-bottom: 20px;">
+      <div class="botones">
+        <button onclick="mostrarContenido('contenido1')">Mensajes</button>
+        <button onclick="mostrarContenido('contenido2')">Sugerencias</button>
+        <button onclick="mostrarContenido('contenido3')">Libro de reclamaciones</button>
+      </div>
+
+      <div class="contenedor">
+        <div id="contenido1" class="contenido">
+          <form id="formMensajes" class="contact-form">
+            <h3>Envíanos un Mensaje</h3>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellidos" placeholder="Apellidos" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+          <div id="historialMensajes" class="historial"></div>
+            <button class="eliminar-historial" onclick="eliminarHistorial('historialMensajes', 'formMensajes')">Eliminar Historial</button>
+        </div>
+    
+        <div id="contenido2" class="contenido">
+          <form id="formSugerencias" class="contact-form">
+            <h3>Sugerencias</h3>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellidos" placeholder="Apellidos" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <textarea name="sugerencia" placeholder="Escribe tu sugerencia" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+          <div id="historialSugerencias" class="historial"></div>
+            <button class="eliminar-historial" onclick="eliminarHistorial('historialSugerencias', 'formSugerencias')">Eliminar Historial</button>
+        </div>
+    
+        <div id="contenido3" class="contenido">
+          <form id="formReclamaciones" class="contact-form">
+            <h3>Libro de Reclamaciones</h3>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellidos" placeholder="Apellidos" required>
+            <input type="text" name="domicilio" placeholder="Domicilio" required>
+            <input type="date" id="fechaInput" name="fecha" required>
+            <input type="text" name="dni" placeholder="DNI/CE" required>
+            <input type="text" name="telefono" placeholder="Teléfono" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+            <div id="historialReclamaciones" class="historial"></div>
+              <button class="eliminar-historial" onclick="eliminarHistorial('historialReclamaciones', 'formReclamaciones')">Eliminar Historial</button>
+        </div>
+      </div>
     </div>
   </div>
-    </div>
-
-  <script>
-  function mostrarContenido(opcion) {
-    document.querySelectorAll('.contenido').forEach(div => {
-      div.classList.remove('activo');
-    });
-    document.getElementById(opcion).classList.add('activo');
-  }
-
-  window.onload = function() {
-    const fechaInput = document.getElementById('fechaInput');
-    const hoy = new Date().toISOString().split('T')[0];
-    fechaInput.value = hoy;
-
-    // Abrir la sección de "Mensajes" automáticamente
-    mostrarContenido('contenido1');
-  };
-</script>
 
 </body>
 
 <script>
   loadFooter();
 </script>
+
 </html>
