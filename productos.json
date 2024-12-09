@@ -459,7 +459,227 @@
             "categoria": "Casual",
             "genero": "Unisex",
             "colores": ["Negro", "Rojo"]
-          }
+          },
+          {
+            "id": 39,
+            "nombre": "Nike Air Zoom Pegasus 40",
+            "precio": 259.90,
+            "imagen": "imagenes y videos/Nike Air Zoom Pegasus 40.png",
+            "descripcion": "Zapatillas de running para hombre",
+            "marca": "NIKE",
+            "categoria": "Running",
+            "genero": "Hombre",
+            "colores": ["Azul", "Negro"]
+        },
+        {
+            "id": 40,
+            "nombre": "Nike Air Max 270",
+            "precio": 249.90,
+            "imagen": "imagenes y videos/Nike Air Max 270.png",
+            "descripcion": "Zapatillas deportivas para hombre",
+            "marca": "NIKE",
+            "categoria": "Deportiva",
+            "genero": "Hombre",
+            "colores": ["Blanco", "Rojo"]
+        },
+        {
+            "id": 41,
+            "nombre": "Nike Free RN 5.0",
+            "precio": 189.90,
+            "imagen": "imagenes y videos/Nike Free RN 5.0.png",
+            "descripcion": "Zapatillas de running para mujer",
+            "marca": "NIKE",
+            "categoria": "Running",
+            "genero": "Mujer",
+            "colores": ["Negro", "Púrpura"]
+        },
+        {
+            "id": 42,
+            "nombre": "Nike SB Dunk Low",
+            "precio": 189.00,
+            "imagen": "imagenes y videos/Nike SB Dunk Low.png",
+            "descripcion": "Zapatillas de skate para hombre",
+            "marca": "NIKE",
+            "categoria": "Skate",
+            "genero": "Hombre",
+            "colores": ["Blanco", "Azul"]
+        },
+        {
+            "id": 43,
+            "nombre": "Nike Air Force 1 Low",
+            "precio": 229.00,
+            "imagen": "imagenes y videos/Nike Air Force 1 Low.png",
+            "descripcion": "Zapatillas clásicas para hombre",
+            "marca": "NIKE",
+            "categoria": "Casual",
+            "genero": "Hombre",
+            "colores": ["Blanco", "Negro"]
+        },
+        {
+            "id": 44,
+            "nombre": "Nike Zoom Freak 5",
+            "precio": 279.90,
+            "imagen": "imagenes y videos/Nike Zoom Freak 5.png",
+            "descripcion": "Zapatillas de baloncesto para hombre",
+            "marca": "NIKE",
+            "categoria": "Baloncesto",
+            "genero": "Hombre",
+            "colores": ["Verde", "Negro"]
+        },
+        {
+            "id": 45,
+            "nombre": "Nike React Infinity Run Flyknit",
+            "precio": 229.90,
+            "imagen": "imagenes y videos/Nike React Infinity Run Flyknit.png",
+            "descripcion": "Zapatillas de running para mujer",
+            "marca": "NIKE",
+            "categoria": "Running",
+            "genero": "Mujer",
+            "colores": ["Blanco", "Gris"]
+        },
+        {
+            "id": 46,
+            "nombre": "Adidas Ultraboost 23",
+            "precio": 299.00,
+            "imagen": "imagenes y videos/Adidas Ultraboost 23.png",
+            "descripcion": "Zapatillas de running para hombre",
+            "marca": "ADIDAS",
+            "categoria": "Running",
+            "genero": "Hombre",
+            "colores": ["Negro", "Blanco"]
+        },
+        {
+            "id": 47,
+            "nombre": "Adidas Predator Edge 1 FG",
+            "precio": 429.00,
+            "imagen": "imagenes y videos/Adidas Predator Edge 1 FG.png",
+            "descripcion": "Chimpunes de fútbol para hombre",
+            "marca": "ADIDAS",
+            "categoria": "Fútbol",
+            "genero": "Hombre",
+            "colores": ["Negro", "Verde"]
+        },
+        {
+            "id": 48,
+            "nombre": "Adidas NMD_R1",
+            "precio": 179.90,
+            "imagen": "imagenes y videos/Adidas NMD_R1.png",
+            "descripcion": "Zapatillas urbanas para mujer",
+            "marca": "ADIDAS",
+            "categoria": "Casual",
+            "genero": "Mujer",
+            "colores": ["Gris", "Blanco"]
+        },
+        {
+            "id": 49,
+            "nombre": "Adidas Terrex Free Hiker 2",
+            "precio": 249.00,
+            "imagen": "imagenes y videos/Adidas Terrex Free Hiker 2.png",
+            "descripcion": "Zapatillas de senderismo para hombre",
+            "marca": "ADIDAS",
+            "categoria": "Outdoor",
+            "genero": "Hombre",
+            "colores": ["Negro", "Amarillo"]
+        },
+        {
+          "id": 50,
+          "nombre": "Adidas Phophere",
+          "precio": 199.00,
+          "imagen": "imagenes y videos/Adidas Phophere.png",
+          "descripcion": "Zapatillas urbanas de estilo único",
+          "marca": "ADIDAS",
+          "categoria": "Casual",
+          "genero": "Unisex",
+          "colores": ["Blanco", "Negro"]
+        },
+        {
+            "id": 51,
+            "nombre": "Adidas X Speedportal .1",
+            "precio": 419.00,
+            "imagen": "imagenes y videos/Adidas X Speedportal .1.png",
+            "descripcion": "Chimpunes profesionales para fútbol",
+            "marca": "ADIDAS",
+            "categoria": "Fútbol",
+            "genero": "Hombre",
+            "colores": ["Negro", "Naranja"]
+        },
+        {
+            "id": 52,
+            "nombre": "Adidas Gazelle",
+            "precio": 149.00,
+            "imagen": "imagenes y videos/Adidas Gazelle.png",
+            "descripcion": "Zapatillas retro para mujer",
+            "marca": "ADIDAS",
+            "categoria": "Casual",
+            "genero": "Mujer",
+            "colores": ["Azul", "Blanco"]
+        },
+        {
+          "id": 53,
+          "nombre": "Adidas Pureboost",
+          "precio": 229.90,
+          "imagen": "imagenes y videos/Adidas Pureboost.png",
+          "descripcion": "Zapatillas de running con tecnología Boost",
+          "marca": "Adidas",
+          "categoria": "Running",
+          "genero": "Unisex",
+          "colores": ["Negro", "Gris"]
+        },
+        {
+            "id": 54,
+            "nombre": "Puma RS-X3 Puzzle",
+            "precio": 179.90,
+            "imagen": "imagenes y videos/Puma RS-X3 Puzzle.png",
+            "descripcion": "Zapatillas deportivas para mujer",
+            "marca": "PUMA",
+            "categoria": "Deportiva",
+            "genero": "Mujer",
+            "colores": ["Multicolor"]
+        },
+        {
+            "id": 55,
+            "nombre": "Puma Future Rider",
+            "precio": 129.90,
+            "imagen": "imagenes y videos/Puma Future Rider.png",
+            "descripcion": "Zapatillas retro para hombre",
+            "marca": "PUMA",
+            "categoria": "Casual",
+            "genero": "Hombre",
+            "colores": ["Azul", "Amarillo"]
+        },
+        {
+            "id": 56,
+            "nombre": "Puma Ignite Limitless",
+            "precio": 159.00,
+            "imagen": "imagenes y videos/Puma Ignite Limitless.png",
+            "descripcion": "Zapatillas de running para hombre",
+            "marca": "Puma",
+            "categoria": "Running",
+            "genero": "Hombre",
+            "colores": ["Negro", "Rojo"]
+        },
+        {
+            "id": 57,
+            "nombre": "Puma Cell Venom",
+            "precio": 149.00,
+            "imagen": "imagenes y videos/Puma Cell Venom.png",
+            "descripcion": "Zapatillas deportivas para mujer",
+            "marca": "PUMA",
+            "categoria": "Deportiva",
+            "genero": "Mujer",
+            "colores": ["Negro", "Blanco"]
+        },
+        {
+            "id": 58,
+            "nombre": "Puma Suede Classic",
+            "precio": 129.90,
+            "imagen": "imagenes y videos/Puma Suede Classic.png",
+            "descripcion": "Zapatillas clásicas para hombre",
+            "marca": "PUMA",
+            "categoria": "Casual",
+            "genero": "Hombre",
+            "colores": ["Azul", "Blanco"]
+        }
         
         
     ]
