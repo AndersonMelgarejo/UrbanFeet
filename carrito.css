@@ -1,3 +1,4 @@
+/* General */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -11,6 +12,7 @@ h1, h2 {
     color: #343a40;
 }
 
+/* Contenedor principal del carrito */
 .carrito-container {
     max-width: 1200px;
     margin: 50px auto;
@@ -20,69 +22,95 @@ h1, h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Lista de productos */
 .lista-productos {
     margin-top: 30px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: flex-start;
 }
 
-.producto-carrito {
+/* Cajas de productos */
+.producto-carrito-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: #ffffff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    width: 250px;
+    height: 400px;
 }
-.imag-tamaño-carrito{
-    height: 290px;
-}
-.producto-carrito:hover {
+
+.producto-carrito-item:hover {
     transform: scale(1.02);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.producto-carrito img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 20px;
-    border: 1px solid #dee2e6;
+/* Imagen del producto */
+.producto-carrito-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 220px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Información del producto */
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    margin-bottom: 5px;
 }
 
 .producto-info h3 {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #212529;
+    margin-bottom: 5px;
 }
 
 .producto-info .descripcion {
     font-size: 0.9em;
     color: #6c757d;
+    margin: 3px 0;
 }
 
 .producto-info .precio {
     font-weight: bold;
     color: #17a2b8;
+    margin-bottom: 5px;
 }
 
-.btn-eliminar {
-    background-color: #dc3545;
+/* Botón de eliminar producto */
+.eliminar-carrito {
+    background-color: #ff6b6b;
     color: white;
     border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 10px 15px;
+    border-radius: 8px;
     font-size: 0.9em;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
 }
 
-.btn-eliminar:hover {
-    background-color: #c82333;
+.eliminar-carrito:hover {
+    background-color: #ff4c4c;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
+/* Resumen del carrito */
 .resumen-carrito {
     margin-top: 30px;
     background-color: #f8f9fa;
@@ -91,6 +119,7 @@ h1, h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Títulos y texto del resumen */
 .resumen-carrito h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -100,6 +129,14 @@ h1, h2 {
 .resumen-carrito p {
     font-size: 1em;
     margin-bottom: 10px;
+}
+
+/* Botones en el resumen */
+.botones-resumen {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .btn-vaciar {
@@ -118,13 +155,12 @@ h1, h2 {
 }
 
 .btn-comprar {
-    width: 100%;
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -133,10 +169,70 @@ h1, h2 {
     background-color: #218838;
 }
 
+/* Total del carrito */
 .total {
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #17a2b8;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carrito-container {
+        padding: 10px;
+    }
+
+    /* Ajustar la lista de productos */
+    .lista-productos {
+        justify-content: center;
+    }
+
+    .producto-carrito-item {
+        width: 220px;
+        height: auto;
+    }
+
+    .producto-info h3 {
+        font-size: 0.9em;
+    }
+
+    /* Ajustar el tamaño de los botones en el resumen */
+    .btn-vaciar, .btn-comprar {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .producto-carrito-item {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .producto-info h3 {
+        font-size: 0.85em;
+    }
+
+    .resumen-carrito {
+        padding: 15px;
+    }
+
+    .btn-vaciar, .btn-comprar {
+        margin-top: 10px;
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .lista-productos {
+        gap: 10px;
+    }
+
+    /* Total */
+    .total {
+        font-size: 1em;
+    }
 }

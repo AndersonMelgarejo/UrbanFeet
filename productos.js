@@ -3,6 +3,8 @@ const productosPorPagina = 15;
 let productosGlobales = [];
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+
+
 // Seleccionamos el slider de precio y el elemento que muestra el valor
 const precioSlider = document.getElementById('precioSlider');
 const precioValor = document.getElementById('precioValor');
