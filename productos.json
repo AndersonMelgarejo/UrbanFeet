@@ -255,7 +255,7 @@
         },
         {
 
-            "id": 20,
+            "id": 24,
             "nombre": "Zapatillas Deportivas 22608-F4",
             "precio": 160.00,
             "imagen": "imagenes y videos/Zapatillas Deportivas 22608-F4.png",
@@ -266,14 +266,15 @@
             "colores": ["Blanco"]
         },
         {
-            "id": 21,
+            "id": 25,
             "nombre": "Zapatillas Kilimanjaro 058F8",
             "precio": 127.20,
             "imagen": "imagenes y videos/Zapatillas Atletix Running Light 45K.png",
             "descripcion": "I-RUN NIEVES COLORES",
-            "marca": "I-RUN",
-
-            "id": 24,
+            "marca": ["I-RUN"]
+        },
+        {
+            "id": 26,
             "nombre": "Nike Air Zoom Pegasus 39",
             "precio": 259.90,
             "imagen": "imagenes y videos/nike_pegasus39.png",
@@ -282,9 +283,9 @@
             "categoria": "Running",
             "genero": "Unisex",
             "colores": ["Negro", "Gris"]
-          },
-          {
-            "id": 25,
+        },
+        {
+            "id": 27,
             "nombre": "Nike Court Vision Low",
             "precio": 199.90,
             "imagen": "imagenes y videos/nike_courtvision.png",
@@ -294,9 +295,9 @@
             "categoria": "Casual",
             "genero": "Unisex",
             "colores": ["Blanco", "Negro"]
-          },
-          {
-            "id": 26,
+        },
+        {
+            "id": 28,
             "nombre": "Nike Free Metcon 4",
             "precio": 289.90,
             "imagen": "imagenes y videos/nike_metcon4.png",
@@ -305,9 +306,9 @@
             "categoria": "Entrenamiento",
             "genero": "Hombre",
             "colores": ["Azul", "Negro"]
-          },
-          {
-            "id": 27,
+        },
+        {
+            "id": 29,
             "nombre": "Nike Renew Ride 3",
             "precio": 229.90,
             "imagen": "imagenes y videos/nike_renewride3.png",
@@ -319,7 +320,7 @@
             "colores": ["Multicolor"]
         },
         {
-            "id": 22,
+            "id": 30,
             "nombre": "Zapatillas FOREST 7341F6",
             "precio": 99.00,
             "imagen": "imagenes y videos/Zapatillas Deportivas 23065-M2.png",
@@ -330,7 +331,7 @@
             "colores": ["Multicolor"]
         },
         {
-            "id": 23,
+            "id": 31,
             "nombre": "Zapatillas 7216M4",
             "precio": 159.00,
             "imagen": "imagenes y videos/Zapatillas Deportivas 23067-M4.png",
@@ -340,7 +341,7 @@
             "colores": ["Rosa", "Blanco"]
           },
           {
-            "id": 28,
+            "id": 32,
             "nombre": "Nike React Infinity Run Flyknit",
             "precio": 349.90,
             "imagen": "imagenes y videos/nike_reactflyknit.png",
@@ -351,7 +352,7 @@
             "colores": ["Verde", "Gris"]
           },
           {
-            "id": 29,
+            "id": 33,
             "nombre": "Adidas Adizero Boston 11",
             "precio": 329.90,
             "imagen": "imagenes y videos/adidas_boston11.png",
@@ -362,7 +363,7 @@
             "colores": ["Rojo", "Blanco"]
           },
           {
-            "id": 30,
+            "id": 34,
             "nombre": "Adidas Stan Smith",
             "precio": 249.90,
             "imagen": "imagenes y videos/adidas_stansmith.png",
@@ -373,7 +374,7 @@
             "colores": ["Blanco", "Verde"]
           },
           {
-            "id": 31,
+            "id": 35,
             "nombre": "Adidas Ultraboost Light",
             "precio": 359.90,
             "imagen": "imagenes y videos/adidas_ultraboostlight.png",
@@ -384,7 +385,7 @@
             "colores": ["Negro", "Naranja"]
           },
           {
-            "id": 32,
+            "id": 36,
             "nombre": "Adidas Superstar",
             "precio": 219.90,
             "imagen": "imagenes y videos/adidas_superstar.png",
@@ -395,7 +396,7 @@
             "colores": ["Blanco", "Negro"]
           },
           {
-            "id": 33,
+            "id": 37,
             "nombre": "Adidas NMD R1",
             "precio": 279.90,
             "imagen": "imagenes y videos/adidas_nmdr1.png",
@@ -406,7 +407,7 @@
             "colores": ["Gris", "Azul"]
           },
           {
-            "id": 34,
+            "id": 38,
             "nombre": "Puma Future Rider Play On",
             "precio": 199.90,
             "imagen": "imagenes y videos/puma_futurerider.png",
@@ -417,7 +418,7 @@
             "colores": ["Rojo", "Amarillo"]
           },
           {
-            "id": 35,
+            "id": 39,
             "nombre": "Puma RS-X Reinvention",
             "precio": 239.90,
             "imagen": "imagenes y videos/puma_rsx.png",
@@ -428,7 +429,7 @@
             "colores": ["Negro", "Blanco"]
           },
           {
-            "id": 36,
+            "id": 40,
             "nombre": "Puma Deviate Nitro",
             "precio": 349.90,
             "imagen": "imagenes y videos/puma_deviate.png",
@@ -439,7 +440,7 @@
             "colores": ["Naranja", "Gris"]
           },
           {
-            "id": 37,
+            "id": 41,
             "nombre": "Puma Tazon 6 FM",
             "precio": 179.90,
             "imagen": "imagenes y videos/puma_tazon6.png",
@@ -450,7 +451,7 @@
             "colores": ["Blanco", "Negro"]
           },
           {
-            "id": 38,
+            "id": 42,
             "nombre": "Puma Cell Surin 2",
             "precio": 209.90,
             "imagen": "imagenes y videos/puma_cellsurin.png",
@@ -461,7 +462,7 @@
             "colores": ["Negro", "Rojo"]
           },
           {
-            "id": 39,
+            "id": 43,
             "nombre": "Nike Air Zoom Pegasus 40",
             "precio": 259.90,
             "imagen": "imagenes y videos/Nike Air Zoom Pegasus 40.png",
@@ -472,7 +473,7 @@
             "colores": ["Azul", "Negro"]
         },
         {
-            "id": 40,
+            "id": 44,
             "nombre": "Nike Air Max 270",
             "precio": 249.90,
             "imagen": "imagenes y videos/Nike Air Max 270.png",
@@ -483,7 +484,7 @@
             "colores": ["Blanco", "Rojo"]
         },
         {
-            "id": 41,
+            "id": 45,
             "nombre": "Nike Free RN 5.0",
             "precio": 189.90,
             "imagen": "imagenes y videos/Nike Free RN 5.0.png",
@@ -494,7 +495,7 @@
             "colores": ["Negro", "Púrpura"]
         },
         {
-            "id": 42,
+            "id": 46,
             "nombre": "Nike SB Dunk Low",
             "precio": 189.00,
             "imagen": "imagenes y videos/Nike SB Dunk Low.png",
@@ -505,7 +506,7 @@
             "colores": ["Blanco", "Azul"]
         },
         {
-            "id": 43,
+            "id": 47,
             "nombre": "Nike Air Force 1 Low",
             "precio": 229.00,
             "imagen": "imagenes y videos/Nike Air Force 1 Low.png",
@@ -516,7 +517,7 @@
             "colores": ["Blanco", "Negro"]
         },
         {
-            "id": 44,
+            "id": 48,
             "nombre": "Nike Zoom Freak 5",
             "precio": 279.90,
             "imagen": "imagenes y videos/Nike Zoom Freak 5.png",
@@ -527,7 +528,7 @@
             "colores": ["Verde", "Negro"]
         },
         {
-            "id": 45,
+            "id": 49,
             "nombre": "Nike React Infinity Run Flyknit",
             "precio": 229.90,
             "imagen": "imagenes y videos/Nike React Infinity Run Flyknit.png",
@@ -538,7 +539,7 @@
             "colores": ["Blanco", "Gris"]
         },
         {
-            "id": 46,
+            "id": 50,
             "nombre": "Adidas Ultraboost 23",
             "precio": 299.00,
             "imagen": "imagenes y videos/Adidas Ultraboost 23.png",
@@ -549,7 +550,7 @@
             "colores": ["Negro", "Blanco"]
         },
         {
-            "id": 47,
+            "id": 51,
             "nombre": "Adidas Predator Edge 1 FG",
             "precio": 429.00,
             "imagen": "imagenes y videos/Adidas Predator Edge 1 FG.png",
@@ -560,7 +561,7 @@
             "colores": ["Negro", "Verde"]
         },
         {
-            "id": 48,
+            "id": 52,
             "nombre": "Adidas NMD_R1",
             "precio": 179.90,
             "imagen": "imagenes y videos/Adidas NMD_R1.png",
@@ -571,7 +572,7 @@
             "colores": ["Gris", "Blanco"]
         },
         {
-            "id": 49,
+            "id": 53,
             "nombre": "Adidas Terrex Free Hiker 2",
             "precio": 249.00,
             "imagen": "imagenes y videos/Adidas Terrex Free Hiker 2.png",
@@ -582,7 +583,7 @@
             "colores": ["Negro", "Amarillo"]
         },
         {
-          "id": 50,
+          "id": 54,
           "nombre": "Adidas Phophere",
           "precio": 199.00,
           "imagen": "imagenes y videos/Adidas Phophere.png",
@@ -593,7 +594,7 @@
           "colores": ["Blanco", "Negro"]
         },
         {
-            "id": 51,
+            "id": 55,
             "nombre": "Adidas X Speedportal .1",
             "precio": 419.00,
             "imagen": "imagenes y videos/Adidas X Speedportal .1.png",
@@ -604,7 +605,7 @@
             "colores": ["Negro", "Naranja"]
         },
         {
-            "id": 52,
+            "id": 56,
             "nombre": "Adidas Gazelle",
             "precio": 149.00,
             "imagen": "imagenes y videos/Adidas Gazelle.png",
@@ -615,7 +616,7 @@
             "colores": ["Azul", "Blanco"]
         },
         {
-          "id": 53,
+          "id": 57,
           "nombre": "Adidas Pureboost",
           "precio": 229.90,
           "imagen": "imagenes y videos/Adidas Pureboost.png",
@@ -626,7 +627,7 @@
           "colores": ["Negro", "Gris"]
         },
         {
-            "id": 54,
+            "id": 58,
             "nombre": "Puma RS-X3 Puzzle",
             "precio": 179.90,
             "imagen": "imagenes y videos/Puma RS-X3 Puzzle.png",
@@ -637,7 +638,7 @@
             "colores": ["Multicolor"]
         },
         {
-            "id": 55,
+            "id": 59,
             "nombre": "Puma Future Rider",
             "precio": 129.90,
             "imagen": "imagenes y videos/Puma Future Rider.png",
@@ -648,7 +649,7 @@
             "colores": ["Azul", "Amarillo"]
         },
         {
-            "id": 56,
+            "id": 60,
             "nombre": "Puma Ignite Limitless",
             "precio": 159.00,
             "imagen": "imagenes y videos/Puma Ignite Limitless.png",
@@ -659,7 +660,7 @@
             "colores": ["Negro", "Rojo"]
         },
         {
-            "id": 57,
+            "id": 61,
             "nombre": "Puma Cell Venom",
             "precio": 149.00,
             "imagen": "imagenes y videos/Puma Cell Venom.png",
@@ -670,7 +671,7 @@
             "colores": ["Negro", "Blanco"]
         },
         {
-            "id": 58,
+            "id": 62,
             "nombre": "Puma Suede Classic",
             "precio": 129.90,
             "imagen": "imagenes y videos/Puma Suede Classic.png",
