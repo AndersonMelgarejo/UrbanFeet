@@ -61,6 +61,7 @@ function crearProductoHTML(producto) {
     `;
 }
 
+
 // Función para agregar al carrito
 function agregarAlCarrito(productId) {
     const producto = productosGlobales.find(p => p.id === productId);
@@ -174,7 +175,7 @@ function filtrarProductos() {
     const productosFiltrados = productosGlobales.filter(producto => {
         const precioValido = producto.precio <= precioMaximo;
         const marcaValida = marcasSeleccionadas.length === 0 || marcasSeleccionadas.includes(producto.marca);
-        const colorValido = coloresSeleccionados.length === 0 || coloresSeleccionados.some(color => producto.colores.includes(color));
+        const colorValido = coloresSeleccionados.length === 0 || coloresSeleccionados.some(color => (Array.isArray(producto.colores) ? producto.colores : []).includes(color));
         const generoValido = generosSeleccionados.length === 0 || generosSeleccionados.includes(producto.genero);
         
         return precioValido && marcaValida && colorValido && generoValido;
