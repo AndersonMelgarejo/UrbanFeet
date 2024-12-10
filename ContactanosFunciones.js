@@ -51,25 +51,48 @@ document.addEventListener("DOMContentLoaded", () => {
         .join("");
     }
   });
-
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-danger"
+    },
+    buttonsStyling: false
+  });
 function eliminarHistorial(historialId, formId) {
-    // Identificar la clave de almacenamiento local según el formulario
-    const formStorageKey = {
-      formMensajes: "historialMensajes",
-      formSugerencias: "historialSugerencias",
-      formReclamaciones: "historialReclamaciones",
-    }[formId];
+
+  Swal.fire({
+    title: "¿Quieres eliminar el historial de mensajes de esta sección?",
+    text: "Se eliminaran todos tus mensajes",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Borrar',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Identificar la clave de almacenamiento local según el formulario
+      const formStorageKey = {
+        formMensajes: "historialMensajes",
+        formSugerencias: "historialSugerencias",
+        formReclamaciones: "historialReclamaciones",
+      }[formId];
   
-    // Borrar el historial del localStorage
-    if (formStorageKey) {
-      localStorage.removeItem(formStorageKey);
-    }
+      // Borrar el historial del localStorage
+      if (formStorageKey) {
+        localStorage.removeItem(formStorageKey);
+      }
   
-    // Limpiar la visualización del historial
-    const historialContainer = document.getElementById(historialId);
-    if (historialContainer) {
-      historialContainer.innerHTML = "<p>Historial eliminado.</p>";
-    }
+      // Limpiar la visualización del historial
+      const historialContainer = document.getElementById(historialId);
+      if (historialContainer) {
+        historialContainer.innerHTML = "<p>Historial eliminado.</p>";
+      }
+      Swal.fire({
+        icon: 'success',
+        title: 'Se elimino los mensajes de esta sección.',
+        confirmButtonText: 'Cerrar'
+      });
+    }  
+  });
 }
   
 function mostrarContenido(opcion) {
